@@ -1,22 +1,85 @@
-@import 'vars';
-@import 'fonts';
-@import 'global';
-//-----------------------------------------------------------------------------------------------------------
-//
-//                                                    START CODE
-//
-//-----------------------------------------------------------------------------------------------------------
+/** @format */
 
+@import "vars";
+@import "fonts";
+@import "global";
 
+/*HEADER START*/
+.header {
+	padding: 24px 64px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
+	&__call-wrapper {
+		margin-left: auto;
+		display: block;
+	}
 
+	&__call-time {
+		display: block;
+	}
 
+	&__call-whatsapp {
+	}
 
+	&__call-phone {
+	}
 
-//-----------------------------------------------------------------------------------------------------------
-//
-//                                                    END CODE
-//
-//-----------------------------------------------------------------------------------------------------------
+	&__call-title {
+		display: block;
+	}
 
-@import 'media';
+	&__btn {
+	}
+
+	&__btn-title {
+	}
+
+	&__btn-text {
+	}
+}
+.logo {
+	&__img {
+	}
+}
+.header-menu {
+	&__list {
+		display: flex;
+		margin-left: 47px;
+	}
+}
+.menu-list {
+	list-style: none;
+	&__item {
+		padding: 2px 11px 6px;
+		margin-right: 5px;
+		border-radius: 4px;
+		transition: all 0.3s;
+		a {
+			color: $link;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;
+		}
+		&--current {
+			a {
+				color: $rose;
+			}
+		}
+		&:hover {
+			background-color: $rose;
+			a {
+				color: #ffffff;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.attention-btn {
+}
+/*HEADER END*/
+
+@import "media";

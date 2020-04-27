@@ -206,7 +206,7 @@ gulp.task("font-eot", function () {
 });
 
 // gulp.task('favicons', function(){ //генератор favicon для всех устройств. Запускается вручную отдельной командой. Генерирует фавиконки на все случаи жизни и файл favicons.html, в котором находятся подключения этих иконок. Скопируйте подключения в файлы проекта и удалите favicons.html Больше нужно для веб-приложений, потому что их ярлыки выносят на главный экран. Сайтам же достаточно закинуть и подключить одну favicon.ico Короче, если вы не уверены, что большинство пользователей мобильных устройств запихнут ярлык вашего сайта на главный экран и разрешат push-уведомления в телефоне, ваша фамилия не Цукерберг и не Дуров - вам этот таск, скорее всего не нужен.
-//   return gulp.src('src/img/favicon/favicon.png')
+//   return gulp.src('src/images/favicon/favicon.png')
 //   .pipe(favgen({
 //     appName: 'My App',
 //     appShortName: 'App',
@@ -233,7 +233,7 @@ gulp.task("font-eot", function () {
 gulp.task("images", function () {
 	//пережимаем изображения и складываем их в директорию build
 	return gulp
-		.src("src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)")
+		.src("src/images/**/*.+(png|jpg|jpeg|gif|svg|ico)")
 		.pipe(size())
 		.pipe(
 			imagemin([
@@ -249,7 +249,7 @@ gulp.task("images", function () {
 				imagemin.svgo(),
 			]),
 		)
-		.pipe(gulp.dest("build/img"))
+		.pipe(gulp.dest("build/images"))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -265,7 +265,7 @@ gulp.task("deletefonts", function () {
 
 gulp.task("deleteimg", function () {
 	//аналогично предыдущей, но с картинками.
-	return del.sync("build/img/**/*.*");
+	return del.sync("build/images/**/*.*");
 });
 
 gulp.task("watch", function () {
@@ -277,7 +277,7 @@ gulp.task("watch", function () {
 		gulp.parallel("font-woff", "font-woff2", "font-eot"),
 	);
 	gulp.watch("src/js/**/*.js", gulp.parallel("minjs", "js"));
-	gulp.watch("src/img/**/*.*", gulp.parallel("images"));
+	gulp.watch("src/images/**/*.*", gulp.parallel("images"));
 });
 
 gulp.task("deploy", function () {
