@@ -4,3 +4,14 @@ $rose: #ce0058;
 $dark: #41474a;
 $link: #5f676b;
 $bg: #f7f7f7;
+
+@mixin centering {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin background {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}

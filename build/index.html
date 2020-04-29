@@ -18,45 +18,727 @@
 		<!-- @format -->
 
 <header class="header">
-	<a href="#" class="logo">
-		<img src="images/logo.svg" alt="Amarylis.logotype" class="logo__img" />
-	</a>
-	<nav class="header-menu">
-		<ul class="menu-list header-menu__list">
-			<li class="menu-list__item menu-list__item--current">
-				<a href="#">Товары</a>
-			</li>
-			<li class="menu-list__item"><a href="#">О брендах</a></li>
-			<li class="menu-list__item"><a href="#">Преимущества</a></li>
-			<li class="menu-list__item"><a href="#">Доставка и оплата</a></li>
-			<li class="menu-list__item"><a href="#">О компании</a></li>
-			<li class="menu-list__item"><a href="#">Акции</a></li>
-			<li class="menu-list__item"><a href="#">Контакты</a></li>
-		</ul>
-	</nav>
-	<button class="header__call-wrapper" type="button">
-		<span class="header__call-time">ПН-ПТ - 10:00-19:00</span>
-		<img src="images/icons/whatsapp.svg" alt="" class="header__call-whatsapp" />
-		<span class="header__call-phone">8 (800) 511-98-97</span>
-		<span class="header__call-title">заказать звонок </span>
-	</button>
-	<a href="" class="attention-btn header__btn">
-		<span class="header__btn-title">Получить</span>
-		<svg
-			width="10"
-			height="26"
-			viewBox="0 0 10 26"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path opacity="0.5" d="M1 1L9 13L1 25" stroke="white" />
-		</svg>
-		<span class="header__btn-text">индивидуальное предложение</span>
-	</a>
+	<div class="container-fluid">
+		<div class="header__wrapper">
+			<a href="#" class="logo">
+				<img src="images/logo.svg" alt="Amarylis.logotype" class="logo__img" />
+			</a>
+			<nav class="header-menu">
+				<ul class="menu-list header-menu__list">
+					<li class="menu-list__item menu-list__item--current">
+						<a href="#">Товары</a>
+					</li>
+					<li class="menu-list__item"><a href="#">О брендах</a></li>
+					<li class="menu-list__item"><a href="#">Преимущества</a></li>
+					<li class="menu-list__item"><a href="#">Доставка и оплата</a></li>
+					<li class="menu-list__item"><a href="#">О компании</a></li>
+					<li class="menu-list__item"><a href="#">Акции</a></li>
+					<li class="menu-list__item"><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<button class="header__call-wrapper" type="button">
+				<span class="header__call-time">ПН-ПТ - 10:00-19:00</span>
+				<span class="header__call-phone">8 (800) 511-98-97</span>
+				<span class="header__call-title">заказать звонок </span>
+			</button>
+			<a href="" class="attention-btn header__btn">
+				<span class="header__btn-title">Получить</span>
+				<svg
+					class="header__btn-arrow"
+					width="10"
+					height="26"
+					viewBox="0 0 10 26"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path opacity="0.5" d="M1 1L9 13L1 25" stroke="white" />
+				</svg>
+				<span class="header__btn-text">индивидуальное предложение</span>
+			</a>
+		</div>
+	</div>
 </header>
 
 		<!-- WRITE CODE HERE -->
-		<main></main>
+		<main>
+			<div class="container-fluid">
+				<!-- TOP SECTION -->
+				<section class="hero">
+					<div class="container">
+						<div class="hero__wrapper">
+							<div class="hero__text-box">
+								<h1 class="hero__title">
+									<span class="hero__title-accent"
+										>Закажите универсальный антисептик для рук и
+										поверхностей</span
+									>
+									от официального дистрибютора в РФ - компании Amarylis
+								</h1>
+								<p class="hero__desc">
+									<strong>Содержит 70% изопропилового спирта:</strong>
+									благодаря которому после нанесения в течение нескольких секунд
+									убиваются 99,9% микробов и бактерий
+								</p>
+								<ul class="hero__list">
+									<li class="hero__list-item">
+										<strong
+											>Различные объемы в наличии: 30мл, 100мл, 150мл,
+											500мл</strong
+										>
+									</li>
+									<li class="hero__list-item">
+										<strong>Уничтожают 99,9% вирусов и бактерий</strong>
+									</li>
+									<li class="hero__list-item">
+										<strong>Содержат увлажняющие кожу вещества</strong>
+									</li>
+									<li class="hero__list-item">
+										<strong>Оптовые и розничные продажи</strong>
+									</li>
+								</ul>
+							</div>
+
+							<div class="hero__image-box">
+								<img src="images/content/hero-picture.png" alt="" />
+								<div class="hero__image-star">
+									<img src="images/euro-stars.svg" alt="" />
+									<span class="star-text">Антисептики из Европы</span>
+								</div>
+							</div>
+						</div>
+						<button
+							class="hero__tringle hero__tringle_js"
+							type="button"
+						></button>
+					</div>
+				</section>
+				<!-- END TOP SECTION -->
+
+				<!-- PRODUCT SECTION -->
+				<section class="product">
+					<div class="container">
+						<div class="product__wrapper">
+							<h2 class="section-title product__title">Наша продукция</h2>
+							<a
+								class="product__tab-btn product__tab-btn--current product__tab-btn_js"
+								href="#wholesale"
+							>
+								ОПТ
+							</a>
+							<a class="product__tab-btn product__tab-btn_js" href="#retail">
+								Розница
+							</a>
+						</div>
+						<div
+							class="product__tab product__tab--current product__tab_js"
+							id="wholesale"
+						>
+							<!-- PRODUCT CARD 1-->
+							<article class="product-item product-item--hit">
+								<div class="product-item__img">
+									<img src="images/content/product-1.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">Solomeya</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 2-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-2.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">Solomeya</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 3-->
+							<article class="product-item product-item--new">
+								<div class="product-item__img">
+									<img src="images/content/product-3.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">Solomeya</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 4-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-4.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 5-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-5.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 6-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-6.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 7-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-7.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 8-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-8.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+						</div>
+
+						<div class="product__tab product__tab_js" id="retail">
+							<!-- PRODUCT CARD 1-->
+							<article class="product-item product-item--hit">
+								<div class="product-item__img">
+									<img src="images/content/product-1.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">Solomeya</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 4-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-4.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 2-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-2.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">Solomeya</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 3-->
+							<article class="product-item product-item--new">
+								<div class="product-item__img">
+									<img src="images/content/product-3.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">Solomeya</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 5-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-5.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 6-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-6.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 7-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-7.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+
+							<!-- PRODUCT CARD 8-->
+							<article class="product-item">
+								<div class="product-item__img">
+									<img src="images/content/product-8.jpg" alt="" />
+									<div class="product-item__label product-item__label--hit">
+										new
+									</div>
+									<div class="product-item__label product-item__label--new">
+										хит
+									</div>
+								</div>
+								<div class="product-item__brand">
+									<a href="#" class="brand-link">HAAN</a>
+									<span class="brand-articul">Арт: ????</span>
+								</div>
+								<h3 class="product-item__description">
+									Solomeya Универсальное антибактериальное средство (спрей) /
+									Universal Sanitizer (spray) (100 мл) Хит
+								</h3>
+								<p
+									class="product-item__description product-item__description--sub"
+								>
+									Аромат "Утренняя роса" наполнен нотками свежей травы на
+									рассвете.
+								</p>
+								<div class="product-item__sale">
+									<div class="product-item__box">
+										<span class="product-item__price">280</span>
+										<span class="product-item__amount">Продажа от 10 шт</span>
+									</div>
+									<button class="product-item__order" type="button">
+										Заказать
+									</button>
+								</div>
+							</article>
+							<!-- END PRODUCT CARD-->
+						</div>
+					</div>
+				</section>
+				<!-- END PRODUCT SECTION -->
+				<section class="brands"></section>
+				<section class="benefits"></section>
+				<section class="delivery"></section>
+				<section class="certificates"></section>
+				<section class="clients"></section>
+				<section class="promotion"></section>
+			</div>
+			<section class="contact"></section>
+		</main>
 		<!-- STOP WRITE CODE -->
 		<footer>
   

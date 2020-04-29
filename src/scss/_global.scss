@@ -31,17 +31,45 @@ h6 {
 }
 
 body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
 	max-width: 100vw;
 	overflow-x: hidden;
 	font-family: "ProximaNova", sans-serif;
 	line-height: 1.33;
+	position: relative;
+	color: $dark;
 }
 
 a {
 	text-decoration: none;
 }
 
+a,
+button {
+	transition: all 0.3s;
+}
+
 button:focus,
 input:focus {
 	outline: transparent;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1380px;
+	padding: 0 30px;
+}
+
+.container-fluid {
+	padding: 0 64px;
+}
+
+.section-title {
+	font-family: Montserrat Alternates;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 1.2;
+	text-align: center;
 }
