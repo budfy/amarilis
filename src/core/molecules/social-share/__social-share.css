@@ -1,0 +1,53 @@
+.social-share__link {
+    display: flex;
+    margin-left: .25rem;
+    transition: all ease .25s;
+}
+
+.social-share__link:hover {
+    opacity: .8;
+}
+
+.social-share .p {
+    margin-right: 0.75rem;
+}
+
+
+/* media */
+
+    @media screen and (max-width: 1680px) {  
+
+    }
+
+    @media screen and (max-width: 1440px) {  
+
+    }
+
+    @media screen and (max-width: 1366px) {  
+
+    }
+
+    @media screen and (max-width: 1359px) {  
+
+    }
+
+    @media screen and (max-width: 1199px) {  
+
+    }
+
+    @media screen and (max-width: 1024px) {  
+
+
+    }
+
+    @media screen and (max-width: 991px) {  
+        
+    }
+
+    @media screen and (max-width: 768px) {  
+
+    }
+
+    @media screen and (max-width: 640px) {  
+
+    }

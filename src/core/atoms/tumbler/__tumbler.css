@@ -1,0 +1,72 @@
+.tumbler {
+    cursor:  pointer;
+}
+
+.tumbler input {
+    display:  none;
+}
+
+.tumbler .tumbler__trigger {
+    width: 3.5rem;
+    height: 2rem;
+    background-color: var(--color__fill-4);
+    border-radius:  0.25rem;
+    transition: all ease 0.32s;
+    background-position:  center;
+    background-repeat:  no-repeat;
+    border-radius: 2rem;
+    position:  relative;
+}
+
+.tumbler .tumbler__label {
+    margin:  0rem;
+    flex: 1;
+    /* padding-left:  1rem; */
+    transition: all ease 0.32s;
+}
+
+.tumbler:hover .tumbler__label {
+   
+}
+
+.tumbler:hover .tumbler__trigger {
+    background-color: var(--color__fill-4-h);    
+}
+
+.tumbler input:checked + * > .tumbler__label {
+    color: var(--color__fill-1);
+}
+
+.tumbler input:checked + * > .tumbler__trigger {
+    background-color: var(--color__fill-1);
+}
+
+.tumbler input:disabled + * > .tumbler__label {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.tumbler input:disabled + * > .tumbler__trigger {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.tumbler:hover input:disabled + * > .tumbler__trigger {
+    background-color: transparent;
+}
+
+.tumbler .tumbler__trigger:after{
+    content: "";
+    width:  1.5rem;
+    height:  1.5rem;
+    position:  absolute;
+    left: 0.25rem;
+    top: 0.25rem;
+    background-color:  white;
+    border-radius:  1.5rem;
+    transition:  all ease 0.32s;
+}
+
+.tumbler input:checked + * > .tumbler__trigger:after {
+    left: calc(100% - 1.75rem);
+}

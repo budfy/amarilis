@@ -1,0 +1,158 @@
+.popup {
+    display: none;
+    position: fixed;
+    left: 0rem;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.popup__shade {
+    position: fixed;
+    left: 0rem;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.64);
+}
+.popup__wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    /* overflow: auto; */
+    padding: 6rem 0rem;
+    box-sizing: border-box;
+}
+
+.popup__content {
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    padding: 3.5rem 5rem;
+    font-size: 0.875rem;
+    color: rgba(46, 46, 46, 0.80);
+    padding-bottom: 3rem;
+    animation-name: fadeInUp;
+    animation-duration: 240ms;
+    animation-fill-mode: both;
+}
+
+.popup__content {
+    max-width: 44rem;
+    width: 100%;
+}
+
+.popup__close {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: -3rem;
+    top: 0rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.5rem;
+    cursor: pointer;
+    transition: all ease .24s;
+}
+
+.popup__close:hover {
+    opacity: .56;
+}
+ 
+.popup__content.--base {
+    max-width: 60rem;
+}
+
+a.js-popup {
+    color: var(--color__dark);
+}
+
+
+.order__row {
+    width: calc(100% + 2rem);
+}
+
+.order__coll {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.order__coll.--mw-33 {
+    max-width: calc(33% - 2rem);
+    margin-top: 2.25rem;
+}
+
+.order__btn {
+    width: 100%;
+    max-width: 100%;
+}
+
+.order__form {
+    margin-top: 4em;
+}
+.popup__close {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L10 10M18 18L10 10M10 10L18 2M10 10L2 18' stroke='white' stroke-width='4'/%3E%3C/svg%3E%0A");
+}
+
+@media screen and (max-width: 1680px) {  
+
+}
+
+@media screen and (max-width: 1440px) {  
+
+}
+
+@media screen and (max-width: 1366px) {  
+
+}
+
+@media screen and (max-width: 1359px) {  
+
+}
+
+@media screen and (max-width: 1199px) {  
+
+}
+
+@media screen and (max-width: 1024px) {  
+
+
+}
+
+@media screen and (max-width: 991px) {  
+    .popup__content {
+        max-width:  100% !important;
+        padding: 2rem;
+    }
+
+    .popup__wrap {
+        padding: 6rem 1rem;
+    }    
+    .popup__close {
+        right: 0;
+        top: -3rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {  
+
+
+    .order__coll {
+        flex: inherit;
+        width: 100%;
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 640px) {  
+
+}

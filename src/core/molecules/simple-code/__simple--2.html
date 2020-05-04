@@ -1,0 +1,173 @@
+<script>
+// Lazy load 
+  function init() {
+  var imgDefer = document.getElementsByTagName('img');
+  for (var i=0; i<imgDefer.length; i++) {
+  if(imgDefer[i].getAttribute('data-src')) {
+  imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+  } } }
+  window.onload = init;
+  
+  // src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+
+
+
+$(document).ready(function () {
+
+});
+
+
+$(window).load(function () {
+  
+});
+
+$('.').inputmask('+7(999) 999-99-99');
+$('.').inputmask("email");
+
+
+$('.').on('click', function(){
+});
+
+$(".lazy").lazyload();
+ 
+$('.').hcSticky({
+  top: 170,
+  bottom: 20,
+});
+
+
+$('.').click(function(){
+  $('html,body').animate({scrollTop:$(this.hash).offset().top - 160}, 480);
+});
+
+
+$('.').owlCarousel({
+    loop:true,
+    autowidth:true,
+    margin:0,
+    items:1,
+    autoplay:false,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
+    smartSpeed:400,
+})  
+
+wow = new WOW(
+  {
+    boxClass:     'wow',
+    animateClass: 'animated',
+    offset: 240,
+    mobile: false,
+    live: true,
+    callback:     function(box) {
+        // функция срабатывает каждый раз при старте анимации
+        // аргумент box — элемент, для которого была запущена анимация
+      },
+  }
+)
+wow.init();
+
+
+var swiper = new Swiper('. .swiper-container', {
+  slidesPerView: 2,
+  slidesPerColumn: 1,
+  spaceBetween: 16,
+  loop:false,
+  autoHeight:true,
+  slidesPerGroup: 2,
+  pagination: {
+    el: '. .swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '. .swiper-button-next',
+    prevEl: '. .swiper-button-prev',
+  },
+  breakpoints: {
+    991: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      spaceBetween: 8,
+    },
+    640: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 8,
+    },
+  }    
+});
+
+
+$('.').click(function(){
+  $('html, body').animate({scrollTop: 0},240);
+});
+
+
+var bodyWidth = $('html').width();
+if (bodyWidth <= '991') {
+
+} else {
+
+}
+
+ 
+var height = $(this).scrollTop();
+  $(window).scroll(function(e) {
+  var height = $(this).scrollTop();
+  $('.TOP ')[height >= 1  ? 'addClass' : 'removeClass']('fixed');
+});
+
+
+$('nameBTN').find('span').text(function(i, text){
+  return text === "Развернуть весь текст" ? "Свернуть весь текст" : "Развернуть весь текст";
+});
+
+
+if (bodyWidth > '991') {
+    $(window).on('resize', function (){
+        var bodyWidth1 = $('html').width();
+        if (bodyWidth1 <= '992') {
+            location.reload();
+            $(window).off('resize');
+        }
+    });
+}
+
+
+// ACTIVE ANHOR SCROLL
+var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    menuItems = topMenu.find("a"),
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-80-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+$(window).scroll(function(){
+   var fromTop = $(this).scrollTop()+topMenuHeight+80;
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href='#"+id+"']").parent().addClass("active");
+   }                   
+});
+
+	
+</script>

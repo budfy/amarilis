@@ -1,0 +1,84 @@
+ p {
+        margin: 1.5rem auto;
+
+}
+
+p b {
+    font-weight: 700;
+}
+
+.p.--xl, p.--xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+p.--xl{
+    color:  var(--color__text-1);
+}
+    
+.p.--l, p.--l{
+    font-size:  1.125rem;
+    line-height: 1.5rem;
+}
+
+p.--l{
+    color:  var(--color__text-1);
+}
+
+p, .--p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+p {
+    color: var(--color__text-1);
+}
+
+.p.--m, p.--m{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+p.--m{
+    color: var(--color__text-1);
+}
+
+.p.--s, p.--s{
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+p.--s{
+    color: var(--color__text-2);
+}
+
+.p.--xs, p.--xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+p.--xs {
+    color: var(--color__text-2); 
+}
+
+.type-editor p:first-child, .type-editor li:first-child {
+    margin-top: 0px !important;
+}
+
+.type-editor p:last-child, .type-editor li:last-child {
+    margin-bottom: 0px !important;
+}
+.type-editor  p:first-child {
+    margin-top: 0px;
+}
+
+.type-editor  p:last-child {
+    margin-bottom: 0px;
+}
+@media screen and (max-width: 991px) {  
+
+    .p.--xl, p.--xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+}

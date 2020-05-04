@@ -1,0 +1,112 @@
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    margin:0px;
+    padding: 0px;
+    font-family: Montserrat;
+    font-weight: normal;
+    background-color:  white;
+    -webkit-font-smoothing: antialiased;
+    color: var(--color__dark);
+}
+
+
+ul, ol {padding: 0px;margin: 0px;list-style: none;}
+
+h2, h3, h1, p {
+    margin: 0px;
+}
+
+main {
+    overflow: hidden;
+    /* padding-top: 7rem; */
+    position: relative;
+    
+}
+
+.js-no-scroll {
+    overflow:hidden;
+}
+
+.type-editor .--max-width {
+    max-width: 46rem;
+    width: 100%;       
+}
+
+.type-editor > *:first-child {
+    margin-top: 0px;
+}
+
+.type-editor h1, .type-editor h2, .type-editor h3, .type-editor h4, .type-editor h5, .type-editor p, .type-editor ul, .type-editor ol {
+    max-width: 46rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}    
+
+.type-editor.--no > *{
+    /* max-width: 100%; */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.center-wrap {
+    max-width: 82rem;
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    width: 100%;
+    
+}
+
+@media screen and (max-width: 1680px) {  
+    html, body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {  
+    html, body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1359px) {  
+
+}
+
+@media screen and (max-width: 1199px) {  
+    html, body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1024px) {  
+
+}
+
+@media screen and (max-width: 991px) {  
+    
+    main {
+        overflow-x: hidden; 
+    }       
+    .center-wrap {
+        padding: 0 2rem;
+    }
+    .center-wrap .center-wrap {
+        padding: 0 0rem;
+    }
+
+}    
+
+@media screen and (max-width: 768px) {  
+
+}
+
+@media screen and (max-width: 640px) {  
+
+}

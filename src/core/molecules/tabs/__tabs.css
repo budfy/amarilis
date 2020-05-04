@@ -1,0 +1,53 @@
+.border-tabs__btn {padding: 1.25rem 1.25rem;font-size: 1.125rem;font-weight: 600;color: #9b9b9b;transition: all ease .24s;/* margin-right: 2rem; */cursor: pointer;}
+
+.border-tabs__btns {
+    box-shadow: inset 0px -0.25rem 0px 0px #f4f4f4;
+}
+
+.border-tabs__btn.is-active {
+    color: #000000;
+    box-shadow: inset 0px -0.25rem 0px 0px #000000;
+}
+
+.border-tabs__btn:last-child {
+    margin-right: 0px;
+}
+
+/* media */
+
+    @media screen and (max-width: 1680px) {  
+
+    }
+
+    @media screen and (max-width: 1440px) {  
+
+    }
+
+    @media screen and (max-width: 1366px) {  
+
+    }
+
+    @media screen and (max-width: 1359px) {  
+
+    }
+
+    @media screen and (max-width: 1199px) {  
+
+    }
+
+    @media screen and (max-width: 1024px) {  
+
+
+    }
+
+    @media screen and (max-width: 991px) {  
+        
+    }
+
+    @media screen and (max-width: 768px) {  
+
+    }
+
+    @media screen and (max-width: 640px) {  
+
+    }

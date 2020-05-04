@@ -1,0 +1,70 @@
+.type-editor blockquote {
+    background-color: var(--color__fill-4);
+    padding: 3rem 3rem;
+    position: relative;
+    border-left: 6px solid var(--color__fill-1);
+    padding-left: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 2.5rem auto;
+}
+.type-editor blockquote p {
+    max-width: 100%;
+    margin: 0px !important;
+}
+
+.type-editor blockquote.--citation {
+    background-color: var(--color__fill-4);
+    border-left: 0px;
+    text-align: center;
+    padding-top: 5rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+}
+
+.type-editor blockquote.--citation:after {
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left: calc(50% - 2.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -2.5rem;
+    background-color: var(--color__fill-4);
+    border: 8px solid white;
+    border-radius: 5rem;
+    background-size: 1.6875rem auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -.375rem;
+}
+.type-editor blockquote.--citation:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='27' height='23' viewBox='0 0 27 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.20122 0H3.06707C2.21501 0 1.4909 0.298214 0.894418 0.894474C0.298214 1.49085 0 2.21495 0 3.06707V9.20099C0 10.0531 0.298046 10.7771 0.894418 11.3733C1.49085 11.9695 2.21518 12.2678 3.06707 12.2678H6.64525C7.07109 12.2678 7.43325 12.417 7.73146 12.7151C8.02968 13.013 8.17873 13.3753 8.17873 13.8015V14.3124C8.17873 15.4413 7.7793 16.4047 6.98067 17.2036C6.18198 18.0021 5.2183 18.4014 4.08928 18.4014H3.06707C2.79001 18.4014 2.55049 18.5029 2.34806 18.7051C2.1458 18.9073 2.04458 19.147 2.04458 19.4239V21.4688C2.04458 21.7452 2.1458 21.9854 2.34806 22.1876C2.55065 22.3898 2.78995 22.4913 3.06707 22.4913H4.08934C5.19698 22.4913 6.25393 22.2753 7.26036 21.8442C8.26674 21.4129 9.13727 20.8297 9.87212 20.0949C10.6068 19.36 11.1899 18.4896 11.6212 17.4832C12.0524 16.4768 12.2681 15.4199 12.2681 14.3124V3.06685C12.2681 2.21473 11.9699 1.49068 11.3736 0.894418C10.7773 0.298158 10.0531 0 9.20122 0Z' fill='%23F52536'/%3E%3Cpath d='M25.4131 0.894474C24.8169 0.298214 24.0928 0 23.2407 0H17.1068C16.2547 0 15.5306 0.298214 14.9343 0.894474C14.3381 1.4909 14.04 2.21495 14.04 3.06707V9.20099C14.04 10.0531 14.3381 10.7771 14.9343 11.3733C15.5306 11.9695 16.2548 12.2678 17.1068 12.2678H20.685C21.1108 12.2678 21.4732 12.417 21.7714 12.7151C22.0693 13.0132 22.2187 13.3753 22.2187 13.8015V14.3124C22.2187 15.4413 21.8192 16.4047 21.0204 17.2036C20.2218 18.0021 19.2583 18.4014 18.1292 18.4014H17.1068C16.8299 18.4014 16.5902 18.5029 16.388 18.7051C16.1856 18.9073 16.0843 19.147 16.0843 19.4239V21.4688C16.0843 21.7452 16.1856 21.9854 16.388 22.1876C16.5901 22.3898 16.8299 22.4913 17.1068 22.4913H18.1292C19.2367 22.4913 20.2936 22.2753 21.3001 21.8442C22.3063 21.4129 23.1767 20.8297 23.9117 20.0949C24.6465 19.36 25.2299 18.4894 25.6609 17.4832C26.0921 16.477 26.3079 15.4199 26.3079 14.3124V3.06685C26.3077 2.21473 26.0098 1.49068 25.4131 0.894474Z' fill='%23F52536'/%3E%3C/svg%3E%0A");
+}
+.type-editor blockquote.--warning {
+    border-color: #ff4545;
+    background-color: #ff00000a;
+    color: #ff4545;
+}
+.type-editor blockquote.--min {
+    padding: 1.5rem;
+    border-left-width: .25rem;
+}
+
+
+ @media screen and (max-width: 991px) {  
+
+    .type-editor blockquote {
+        padding: 2rem;
+    }
+
+    .type-editor blockquote.--citation:after {
+        width: 4rem;
+        height: 4rem;
+        top: -2rem;
+        left: calc(50% - 2rem);
+    }
+
+}    

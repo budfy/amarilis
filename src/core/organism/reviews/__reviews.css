@@ -1,0 +1,263 @@
+.--svg__review-service {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.9432 8.00065C17.9148 7.74763 17.6198 7.55749 17.3647 7.55749C16.5399 7.55749 15.808 7.07321 15.5011 6.32425C15.1875 5.55714 15.3897 4.66252 16.0044 4.09867C16.1978 3.92179 16.2214 3.62571 16.0591 3.42003C15.6369 2.88398 15.1572 2.39976 14.6333 1.98011C14.4282 1.81549 14.1272 1.8384 13.9493 2.03536C13.4128 2.62948 12.4492 2.85029 11.7046 2.5396C10.9297 2.21365 10.4411 1.42845 10.4889 0.585599C10.5047 0.320855 10.3112 0.0906684 10.0472 0.0599277C9.37497 -0.017828 8.6968 -0.020239 8.02252 0.0545699C7.76159 0.0833683 7.5681 0.30813 7.57688 0.569526C7.60621 1.40408 7.11168 2.17554 6.34451 2.48978C5.60881 2.79028 4.65196 2.57135 4.11658 1.98252C3.93964 1.78857 3.64355 1.76473 3.43741 1.92539C2.898 2.3486 2.40743 2.83321 1.98141 3.36485C1.81525 3.57153 1.8397 3.8711 2.03512 4.04891C2.66152 4.61617 2.86378 5.51857 2.53836 6.29452C2.22767 7.0343 1.45949 7.51108 0.580068 7.51108C0.294695 7.50191 0.0914322 7.69345 0.0602228 7.9529C-0.0189393 8.62906 -0.019877 9.31801 0.0563384 9.99967C0.084601 10.2538 0.388592 10.4422 0.646505 10.4422C1.43022 10.4222 2.18267 10.9074 2.49831 11.6755C2.81295 12.4426 2.61069 13.3367 1.99507 13.901C1.80253 14.0779 1.77808 14.3735 1.94036 14.5792C2.35854 15.1119 2.8384 15.5965 3.36414 16.0197C3.57035 16.1858 3.87039 16.1624 4.04914 15.9654C4.5876 15.3698 5.55114 15.1494 6.2928 15.4607C7.06962 15.7857 7.55826 16.5708 7.51044 17.4141C7.49483 17.679 7.68926 17.9096 7.95213 17.9399C8.29603 17.98 8.64202 18 8.98894 18C9.31824 18 9.64762 17.9819 9.97692 17.9453C10.2379 17.9165 10.4313 17.6917 10.4225 17.4299C10.3923 16.5958 10.8877 15.8243 11.6539 15.5106C12.3945 15.2081 13.3473 15.4295 13.8828 16.0177C14.0607 16.2113 14.3548 16.2347 14.562 16.0745C15.1004 15.6523 15.59 15.1681 16.018 14.635C16.1841 14.4288 16.1607 14.1288 15.9642 13.951C15.3378 13.3837 15.1346 12.4812 15.46 11.7058C15.7659 10.9759 16.5056 10.4858 17.3012 10.4858L17.4125 10.4886C17.6705 10.5096 17.9079 10.3108 17.9392 10.0474C18.0185 9.37065 18.0195 8.68231 17.9432 8.00065ZM9.01405 12.021C7.35861 12.021 6.01205 10.6745 6.01205 9.01905C6.01205 7.36367 7.35861 6.01705 9.01405 6.01705C10.6694 6.01705 12.016 7.36367 12.016 9.01905C12.016 10.6745 10.6694 12.021 9.01405 12.021Z' fill='%23DFDFDF'/%3E%3C/svg%3E");
+}
+.--svg__review-doc {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='18' viewBox='0 0 16 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.77679 3.05176e-05C5.83727 3.05176e-05 4.25977 1.57797 4.25977 3.51749V5.3398C4.25977 7.27946 5.83727 8.8574 7.77679 8.8574C9.71646 8.8574 11.2938 7.27946 11.2938 5.3398V3.51749C11.2939 1.57797 9.71646 3.05176e-05 7.77679 3.05176e-05Z' fill='%23DFDFDF'/%3E%3Cpath d='M15.532 13.4408C14.4058 11.5216 12.6057 10.0987 10.4633 9.43433C10.4136 9.41892 10.3599 9.43202 10.3229 9.4686C9.32627 10.4512 8.08787 11.2179 7.77828 11.4031C7.4478 11.1918 6.05576 10.2845 5.2282 9.4686C5.19134 9.43202 5.13719 9.41892 5.0878 9.43433C2.9451 10.0989 1.14511 11.5217 0.0193318 13.441C-0.00644395 13.4849 -0.00644395 13.5394 0.0193318 13.5834C1.61801 16.3075 4.59 17.9998 7.77554 17.9998C10.9612 17.9998 13.9334 16.3075 15.532 13.5834C15.558 13.5393 15.558 13.4847 15.532 13.4408ZM12.559 14.49C12.559 14.5676 12.4852 14.6269 12.4077 14.6269H11.4551C11.3775 14.6269 11.2929 14.6936 11.2929 14.7714V15.7565C11.2929 15.8339 11.2514 15.8931 11.1738 15.8931H10.3183C10.2407 15.8931 10.1675 15.8339 10.1675 15.7565V14.7714C10.1672 14.6937 10.1142 14.6269 10.0366 14.6269H9.04302C8.9654 14.6269 8.90118 14.5675 8.90118 14.49V13.6418C8.90118 13.5642 8.9654 13.5016 9.04302 13.5016H10.0366C10.1142 13.5016 10.1672 13.4382 10.1672 13.3605V12.3742C10.1672 12.2966 10.2404 12.2354 10.318 12.2354H11.1643C11.2417 12.2354 11.2927 12.2966 11.2927 12.3742V13.3633C11.2927 13.4411 11.3679 13.5014 11.4456 13.5014H12.4077C12.4852 13.5014 12.559 13.5671 12.559 13.6447V14.49V14.49Z' fill='%23DFDFDF'/%3E%3C/svg%3E");
+}
+.--svg__rate {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='1' d='M10.5833 0L13.3205 6.81601L20.6487 7.3129L15.0121 12.0223L16.8041 19.1454L10.5833 15.24L4.36261 19.1454L6.15458 12.0223L0.517985 7.3129L7.84621 6.81601L10.5833 0Z' fill='%23DFDFDF'/%3E%3C/svg%3E");
+}
+.--svg__rate-active {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5833 0L13.3205 6.81601L20.6487 7.3129L15.0121 12.0223L16.8041 19.1454L10.5833 15.24L4.36261 19.1454L6.15458 12.0223L0.517985 7.3129L7.84621 6.81601L10.5833 0Z' fill='%23FFB800'/%3E%3C/svg%3E");
+}
+
+.reviews-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem 1rem;
+}
+
+.reviews-item {
+    z-index: 2;
+    position: relative;
+    background-color: var(--color__fill-4);
+    overflow: hidden;
+    border-top: .5rem solid var(--color__dark);
+}
+
+.--review-pdg {
+    padding: 3rem 3rem;
+}
+
+.reviews-item__head {
+    /* background-color: rgba(11, 17, 66, 0.56); */
+    /* color: white; */
+}
+.reviews-item__other-info {
+    text-align: right;
+}
+.reviews-item__title-line {margin-bottom: 2;}
+
+.reviews-item__info-title {
+    margin-right: .5rem;
+    opacity: .4;
+}
+
+.reviews-item__info-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.reviews-item__info-line {
+    margin-bottom: .5rem;
+}
+
+.reviews-item__info-line:last-child {
+    margin-bottom: 0;
+}
+
+.reviews-item__date {
+    margin-bottom: .75rem;
+    opacity: .24;
+}
+
+.reviews-item__desc {
+    margin: 0;
+}
+
+.reviews-item__rate {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-size: 100% auto;
+    margin-left: .125rem;
+    background-repeat: no-repeat;
+}
+.reviews-item__doctor-name {
+    opacity: .5;
+}
+
+.reviews-item__answer {
+    /* padding: 1rem 1.5rem; */
+    background-color: var(--color__fill-4);
+    border-radius: 0 1rem 1rem 1rem;
+    font-weight: 650;
+    margin-top: .5rem;
+}
+
+.reviews-item__doc-avatar {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-size: cover;
+    border-radius: 5rem;
+    border: 1px solid var(--color__border);
+}
+
+.reviews-item__content {
+    /* padding-bottom: 2.5rem; */
+    padding-top: 1.5rem;
+    border-top: 1px solid #e4e4e4;
+    margin-top: 1.5rem;
+}
+
+.reviews-item__mini-desc {
+    flex: 1;
+}
+.reviews-item__scan-link {
+    width: 9.5rem;
+    border: 1px solid var(--color__border);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    min-height: 13.25rem;
+    align-items: center;
+    display: flex;
+}
+
+.reviews-item__scan-img {
+    width: 100%;
+    transition: all ease .24s;
+}
+
+.reviews-item__scan-link:after {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color__fill-1);
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -1.5rem;
+    top: 50%;
+    margin-top: -1.5rem;
+    border-radius: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(7, 185, 209, 0.56);
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5337 18.2492L16.2048 13.9205C17.2481 12.4146 17.7699 10.7361 17.7699 8.88498C17.7699 7.68185 17.5364 6.53118 17.0692 5.43325C16.6024 4.33514 15.9713 3.38865 15.1762 2.59356C14.3811 1.79847 13.4347 1.16738 12.3368 0.700496C11.2386 0.233484 10.088 0 8.8849 0C7.68185 0 6.53118 0.233484 5.43325 0.700496C4.33514 1.16738 3.38865 1.79847 2.59356 2.59356C1.79838 3.38865 1.16737 4.33532 0.700452 5.43325C0.233484 6.53131 0 7.68185 0 8.88498C0 10.088 0.233484 11.2383 0.700452 12.3365C1.16733 13.4345 1.79838 14.3808 2.59356 15.1762C3.38865 15.9713 4.33532 16.6021 5.43325 17.0693C6.53131 17.5362 7.68185 17.7696 8.8849 17.7696C10.7361 17.7696 12.4146 17.2477 13.9207 16.2046L18.2495 20.5207C18.5524 20.8403 18.9305 21.0002 19.3852 21.0002C19.8312 21.0002 20.2118 20.8426 20.5273 20.527C20.8429 20.2115 21.0005 19.8309 21.0005 19.385C21.0005 18.939 20.845 18.5605 20.5337 18.2492ZM12.8793 12.879C11.7729 13.9855 10.4416 14.5388 8.8849 14.5388C7.32848 14.5388 5.99711 13.9854 4.89065 12.879C3.78419 11.7726 3.23098 10.4414 3.23098 8.88472C3.23098 7.32831 3.78432 5.99672 4.89065 4.89047C5.99689 3.78397 7.32848 3.2308 8.8849 3.2308C10.4414 3.2308 11.7728 3.78419 12.8793 4.89047C13.9859 5.99672 14.5391 7.32831 14.5391 8.88472C14.5391 10.4414 13.9857 11.7726 12.8793 12.879Z' fill='white'/%3E%3Cpath d='M12.5169 8.07675H9.68989V5.24979C9.68989 5.14039 9.64988 5.04579 9.57001 4.96583C9.49004 4.88586 9.39536 4.84595 9.28609 4.84595H8.47835C8.36899 4.84595 8.27435 4.88586 8.19443 4.96583C8.11456 5.04579 8.07455 5.14039 8.07455 5.24979V8.07675H5.24755C5.13819 8.07675 5.04355 8.11675 4.96363 8.19663C4.88367 8.2766 4.84375 8.37119 4.84375 8.4806V9.28824C4.84375 9.39764 4.88367 9.49233 4.96363 9.57221C5.04359 9.65217 5.13806 9.69213 5.24755 9.69213H8.07455V12.5191C8.07455 12.6287 8.11456 12.7232 8.19443 12.8032C8.2744 12.883 8.36899 12.9229 8.47835 12.9229H9.28604C9.39536 12.9229 9.49004 12.883 9.56996 12.8032C9.64984 12.7232 9.68984 12.6287 9.68984 12.5191V9.69213H12.5168C12.6264 9.69213 12.7207 9.65213 12.8009 9.57221C12.8807 9.49233 12.9204 9.39764 12.9204 9.28824V8.4806C12.9204 8.37119 12.8807 8.2766 12.8009 8.19663C12.7211 8.11675 12.6264 8.07675 12.5169 8.07675Z' fill='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 1.5rem;
+    transition: all ease .24s;
+}
+
+.reviews-item__scan-link:hover:after {
+    transform: scale(1.25);
+}
+
+.reviews-item__scan-link:hover .reviews-item__scan-img {
+    opacity: .65;
+}
+
+.reviews-sort-select {
+    border-radius: 1rem;
+}
+
+.reviews-sort {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color__border);
+    margin-bottom: 2.5rem;
+}
+.reviews-item__answer-wrap {
+    padding: 1rem 2rem;
+    background-color: white;
+    border-left: .25rem solid #e6e6e6;
+    align-items: center;
+}
+.reviews-item__info {
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1680px) {  
+
+}
+
+@media screen and (max-width: 1440px) {  
+
+}
+
+@media screen and (max-width: 1366px) {  
+
+}
+
+@media screen and (max-width: 1359px) {  
+
+}
+
+@media screen and (max-width: 1199px) {  
+
+}
+
+@media screen and (max-width: 1024px) {  
+
+
+}
+
+@media screen and (max-width: 991px) {  
+    .reviews-items {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }    
+    .reviews-item__answer-wrap {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .reviews-item__doc-avatar {
+        margin-right: 0px !important;
+    }
+
+
+    
+}
+
+@media screen and (max-width: 768px) {  
+
+}
+
+@media screen and (max-width: 640px) {  
+
+    .reviews-item__message {
+        /* flex: 1; */
+    }
+    .reviews-item__scan-link {
+        width: 100%;
+        margin: 0px !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .reviews-item__content {
+        padding: 0rem !important;
+    }
+
+    .reviews-item__other-info {
+        margin-top: 1rem;
+        text-align: left;
+        FONT-WEIGHT: 100%;
+    }
+    .--review-pdg {
+        padding: 2rem;
+        }
+    .reviews-items {
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+
+
+
+
+
+
+

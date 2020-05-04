@@ -1,0 +1,45 @@
+.link {
+    text-decoration: none;
+    transition: all ease .24s;
+}
+
+.link:hover {/* text-decoration: underline; */}
+
+.link:active {
+    opacity: .4;
+}
+
+.link.--color-1 {
+    color: var(--color__fill-1);
+}
+
+.link.--color-1:hover {
+    color: var(--color__fill-1-h);
+}
+
+.link.--color-2 {
+    color: var(--color__fill-2);
+}
+
+.link.--color-2:hover {
+    color: var(--color__fill-1);
+}
+
+.link.--color-white {
+    color: white;
+    opacity: .64;
+}
+
+.link.--color-white:hover {
+    color: white;
+    opacity: 1;
+}
+.type-editor a {
+    color: var(--color__fill-1);
+    font-weight: 700;
+    text-decoration: none;
+} 
+.type-editor a:hover {
+    color: var(--color__black);
+    transition: all 0.32s;
+} 

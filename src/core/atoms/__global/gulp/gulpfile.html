@@ -1,0 +1,61 @@
+var gulp            = require('gulp'),
+    concat          = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации js файлов)
+    uglify          = require('gulp-uglify'), // Подключаем gulp-uglifyjs (для сжатия JS)
+    cleanCSS        = require('gulp-clean-css'), // минифицирует css
+    purge           = require('gulp-css-purge'), // минифицирует css
+    imagemin        = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
+    pngquant        = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
+    cache           = require('gulp-cache'); // Подключаем библиотеку кеширования
+    del             = require('del'); // удаляет дирректории
+
+gulp.task('css', function () {
+  return gulp.src(
+        [
+            'template/core/atoms/**/*.css',
+            'template/core/molecules/**/*.css',
+            'template/core/organism/**/*.css',
+            'template/css/*.css',
+            'template/libs/*.css', 
+            'template/libs/**/*.css', 
+        ]
+    )
+    .pipe(concat("css/__all.min.css"))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('template/dist/'));
+});
+
+gulp.task('js', function() {
+  return gulp.src(
+        [
+            'template/core/atoms/**/*.js',
+            'template/core/molecules/**/*.js',
+            'template/core/organism/**/*.js',
+            'template/js/*.js', 
+            'template/libs/**/*.js',
+        ]
+    )
+    .pipe(concat('js/__all.min.js'))
+    .pipe(gulp.dest('template/dist/'));
+});
+
+gulp.task('img', function() {
+    return gulp.src('template/img/*')
+        .pipe(cache(imagemin({
+            interlaced: true,
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        })))
+        .pipe(gulp.dest('template/dist/img'));
+});
+
+gulp.task('clear', function () {
+    return cache.clearAll();
+}) 
+
+
+gulp.task('clean', function(){
+    return del('template/dist/css/critical/', {force:true});
+});
+
+gulp.task('default', gulp.series('clear', 'css', 'js', 'img', 'clean')); 

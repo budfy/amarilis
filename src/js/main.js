@@ -1,15 +1,33 @@
 /** @format */
 
 $(function () {
-	$(".product__tab-btn_js").on("click", function (e) {
-		let id = $(this).attr("href");
-		e.preventDefault();
-
-		$(this).addClass("product__tab-btn--current");
-		$(this)
-			.siblings(".product__tab-btn")
-			.removeClass("product__tab-btn--current");
-		$(id).addClass("product__tab--current");
-		$(id).siblings(".product__tab_js").removeClass("product__tab--current");
+	var review_carusel = new Swiper(".js-swiper__demo .swiper-container", {
+		slidesPerView: 3,
+		slidesPerColumn: 1,
+		spaceBetween: 32,
+		loop: false,
+		autoHeight: true,
+		slidesPerGroup: 3,
+		pagination: {
+			el: ".js-swiper__demo .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".js-swiper__demo .swiper-button-next",
+			prevEl: ".js-swiper__demo .swiper-button-prev",
+		},
+		breakpoints: {
+			990: {
+				slidesPerView: 2,
+				slidesPerColumn: 1,
+				spaceBetween: 24,
+			},
+			640: {
+				slidesPerView: 1,
+				slidesPerColumn: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 24,
+			},
+		},
 	});
 });

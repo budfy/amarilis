@@ -14,6 +14,8 @@ let gulp = require("gulp"),
 	rename = require("gulp-rename"), //переименовывает файлы, добавляет им префиксы и суффиксы
 	imagemin = require("gulp-imagemin"), //пережимает изображения
 	recompress = require("imagemin-jpeg-recompress"), //тоже пережимает, но лучше. Плагин для плагина
+	pngquant = require("imagemin-pngquant"),
+	cache = require("gulp-cache"),
 	uglify = require("gulp-uglify"), //то же, что cssmin, только для js
 	concat = require("gulp-concat"), //склеивает css и js-файлы в один
 	del = require("del"), //удаляет указанные файлы и директории. Нужен для очистки перед билдом
@@ -93,9 +95,27 @@ gulp.task("style", function () {
 		.src([
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
+			"libs/swiper/swiper.min.css",
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
+		.pipe(cssmin()) //минифицируем полученный файл
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest("build/css")) //кидаем готовый файл в директорию
+		.pipe(size());
+});
+
+gulp.task("core-css", function () {
+	//создаём единую библиотеку из css-стилей всех плагинов
+	return gulp
+		.src([
+			//указываем, где брать исходники
+			"src/core/atoms/**/*.css",
+			"src/core/molecules/**/*.css",
+			"src/core/organism/**/*.css",
+		])
+		.pipe(sourcemaps.init())
+		.pipe(concat("core.min.css")) //склеиваем их в один файл с указанным именем
 		.pipe(cssmin()) //минифицируем полученный файл
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest("build/css")) //кидаем готовый файл в директорию
@@ -108,11 +128,30 @@ gulp.task("script", function () {
 		.src([
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
+			"libs/swiper/swiper.min.js",
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
 		.pipe(babel())
 		.pipe(concat("libs.min.js"))
+		.pipe(uglify())
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest("build/js"))
+		.pipe(size());
+});
+
+gulp.task("core-js", function () {
+	//аналогично поступаем с js-файлами
+	return gulp
+		.src([
+			"src/core/atoms/**/*.js",
+			"src/core/molecules/**/*.js",
+			"src/core/organism/**/*.js",
+		])
+		.pipe(size())
+		.pipe(sourcemaps.init())
+		.pipe(babel())
+		.pipe(concat("core.min.js"))
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest("build/js"))
@@ -147,7 +186,7 @@ gulp.task("js", function () {
 gulp.task("html", function () {
 	//собираем html из кусочков
 	return gulp
-		.src(["src/**/*.html", "!src/components/**/*.html"])
+		.src(["src/**/*.html", "!src/components/**/*.html", "!src/core/**/*.*"])
 		.pipe(sourcemaps.init())
 		.pipe(
 			include({
@@ -232,30 +271,42 @@ gulp.task("font-eot", function () {
 
 gulp.task("images", function () {
 	//пережимаем изображения и складываем их в директорию build
-	return gulp
-		.src("src/images/**/*.+(png|jpg|jpeg|gif|svg|ico)")
-		.pipe(size())
-		.pipe(
-			imagemin([
-				recompress({
-					//Настройки сжатия изображений. Сейчас всё настроено так, что сжатие почти незаметно для глаза на обычных экранах. Можете покрутить настройки, но за результат не отвечаю.
-					loops: 4, //количество прогонок изображения
-					min: 70, //минимальное качество в процентах
-					max: 80, //максимальное качество в процентах
-					quality: "high", //тут всё говорит само за себя, если хоть капельку понимаешь английский
+	return (
+		gulp
+			.src("src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)")
+			.pipe(size())
+			.pipe(
+				cache(
+					imagemin({
+						interlaced: true,
+						progressive: true,
+						svgoPlugins: [{ removeViewBox: false }],
+						use: [pngquant()],
+					}),
+				),
+			)
+			// .pipe(
+			// 	imagemin([
+			// 		recompress({
+			// 			//Настройки сжатия изображений. Сейчас всё настроено так, что сжатие почти незаметно для глаза на обычных экранах. Можете покрутить настройки, но за результат не отвечаю.
+			// 			loops: 4, //количество прогонок изображения
+			// 			min: 70, //минимальное качество в процентах
+			// 			max: 80, //максимальное качество в процентах
+			// 			quality: "high", //тут всё говорит само за себя, если хоть капельку понимаешь английский
+			// 		}),
+			// 		imagemin.gifsicle(), //тут и ниже всякие плагины для обработки разных типов изображений
+			// 		imagemin.optipng(),
+			// 		imagemin.svgo(),
+			// 	]),
+			// )
+			.pipe(gulp.dest("build/img"))
+			.pipe(
+				browserSync.reload({
+					stream: true,
 				}),
-				imagemin.gifsicle(), //тут и ниже всякие плагины для обработки разных типов изображений
-				imagemin.optipng(),
-				imagemin.svgo(),
-			]),
-		)
-		.pipe(gulp.dest("build/images"))
-		.pipe(
-			browserSync.reload({
-				stream: true,
-			}),
-		)
-		.pipe(size());
+			)
+			.pipe(size())
+	);
 });
 
 gulp.task("deletefonts", function () {
@@ -265,7 +316,7 @@ gulp.task("deletefonts", function () {
 
 gulp.task("deleteimg", function () {
 	//аналогично предыдущей, но с картинками.
-	return del.sync("build/images/**/*.*");
+	return del.sync("build/ig/**/*.*");
 });
 
 gulp.task("watch", function () {
@@ -277,7 +328,7 @@ gulp.task("watch", function () {
 		gulp.parallel("font-woff", "font-woff2", "font-eot"),
 	);
 	gulp.watch("src/js/**/*.js", gulp.parallel("minjs", "js"));
-	gulp.watch("src/images/**/*.*", gulp.parallel("images"));
+	gulp.watch("src/img/**/*.*", gulp.parallel("images"));
 });
 
 gulp.task("deploy", function () {
@@ -326,5 +377,7 @@ gulp.task(
 		"font-eot",
 		"font-woff2",
 		"images",
+		"core-css",
+		"core-js",
 	),
 ); //запускает все перечисленные задачи разом

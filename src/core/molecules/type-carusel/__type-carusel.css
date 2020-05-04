@@ -1,0 +1,102 @@
+.type-carusel__btn {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -2.25rem;
+    z-index: 2;
+    box-shadow: 0px 1rem 4rem rgba(0, 0, 0, 0.16);
+    transition: all ease .24s;
+    outline: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 1.125rem;
+}
+.type-carusel__btn:hover {
+    transform: scale(1.125);
+}
+
+.type-carusel__btn:active {
+    opacity: .72;
+    transform: scale(1);
+}
+
+.--svg__carusel-arrow-dark--left {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='18' viewBox='0 0 12 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 2L3 9L10 16' stroke='%23000' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.--svg__carusel-arrow-dark--right {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='18' viewBox='0 0 12 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L9 9L2 16' stroke='%23000' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+} 
+
+.type-carusel {
+    position: relative;
+}
+
+.type-carusel__btn.--left {
+    left: -2.25rem;
+    background-position: calc(50% - .125rem) center;
+}
+
+.type-carusel__btn.--right {
+    right: -2.25rem;
+     background-position: calc(50% + .125rem) center;
+}
+
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0 !important;
+}
+
+.type-carusel .swiper-container {
+    overflow: hidden;
+    min-width: 1px;
+    width: 100%;
+}
+
+.type-carusel__swiper {
+    position: relative;
+    min-width: 1px;
+    width: 100% !important;
+}
+.swiper-button-disabled {
+    opacity: 0 !important;
+}
+
+@media screen and (max-width: 1680px) {  
+
+}
+
+@media screen and (max-width: 1440px) {  
+
+}
+
+@media screen and (max-width: 1366px) {  
+
+}
+
+@media screen and (max-width: 1359px) {  
+
+}
+
+@media screen and (max-width: 1199px) {  
+
+}
+
+@media screen and (max-width: 1024px) {  
+
+
+}
+
+@media screen and (max-width: 991px) {  
+    
+}
+
+@media screen and (max-width: 768px) {  
+
+}
+
+@media screen and (max-width: 640px) {  
+
+}

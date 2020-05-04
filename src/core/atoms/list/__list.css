@@ -1,0 +1,80 @@
+.type-editor ol {
+    padding-left:  1rem;
+}
+
+.type-editor ol li {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin: 0.5rem 0rem;
+    color: var(--color__text-1);
+    position: relative;
+    padding-left: 1rem;
+    list-style-type: decimal;
+}
+
+.type-editor ul {}
+
+.type-editor ul li {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin: 0.5rem 0rem;
+    color: var(--color__text-1);
+    position:  relative;
+    padding-left:  2rem;
+}
+
+.type-editor ul li:after {
+    content:  "";
+    width:  0.5rem;
+    height:  0.5rem;
+    background-color: var(--color__fill-1);
+    position:  absolute;
+    left:  0rem;
+    top: 6px;
+    border-radius:  0.5rem;
+    background-size: 0.75rem;
+}
+
+.type-editor ul.--check li:after {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center 0.2rem;
+    top: -.15rem;
+    background-size: 1rem;
+}
+.type-editor ul.--black li:after {
+    background-color: var(--color__dark);
+}
+.type-editor ul.--check li {
+    margin: 1.25rem 0px;
+    padding-left: 2.5rem;
+}
+.type-editor ul.--check li:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 5.33329L7.33333 16L2 10.6666' stroke='white' stroke-width='4'/%3E%3C/svg%3E%0A");
+}
+
+.type-editor ul.--connections {}
+
+.type-editor ul.--connections li {
+    margin: 1.5rem 0px;
+}
+
+.type-editor ul.--connections li:after {
+    width: 1rem;
+    height: 1rem;
+    left: -.5rem;
+    top: .25rem;
+}
+.type-editor ul.--warning li:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='6' height='20' viewBox='0 0 6 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.533125 0.666687H5.49313L4.66646 12.8534H1.35979L0.533125 0.666687ZM3.01313 19.5467C2.28424 19.5467 1.6709 19.3156 1.17313 18.8534C0.693125 18.3734 0.453125 17.7956 0.453125 17.12C0.453125 16.4445 0.693125 15.8845 1.17313 15.44C1.65313 14.9778 2.26646 14.7467 3.01313 14.7467C3.75979 14.7467 4.37313 14.9778 4.85313 15.44C5.33313 15.8845 5.57313 16.4445 5.57313 17.12C5.57313 17.7956 5.32424 18.3734 4.82646 18.8534C4.34646 19.3156 3.74201 19.5467 3.01313 19.5467Z' fill='white'/%3E%3C/svg%3E");
+    background-size: auto 1.125rem;
+}
+.type-editor ul li:before {}
+
+.type-editor ul.--connections li:before {content: "";display: block;position: absolute;width: 2rem;height: calc(100% + 1rem);left: -2rem;border-left: .5rem solid var(--color__fill-4);border-top: .5rem solid var(--color__fill-4);border-bottom: .5rem solid var(--color__fill-4);top: .5rem;border-radius: 2rem;}
+
+.type-editor ul.--connections li:last-child:before {
+    display: none;
+}

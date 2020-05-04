@@ -1,0 +1,445 @@
+.cols {
+    width: 100%;
+}
+
+.col.--auto {
+    flex: 1;
+    
+}
+
+.col.--1 {
+    width: 100%;
+    max-width: 4rem;
+    
+}
+
+.col.--2 {
+    width: 100%;
+    max-width: calc(4rem * 2 + (2rem));
+    
+}
+
+.col.--3 {
+    width: 100%;
+    max-width: calc(4rem * 3 + (2rem * 2));
+}
+
+.col.--4 {
+    width: 100%;
+    max-width: calc(4rem * 4 + (2rem * 3));
+}
+
+.col.--5 {
+    width: 100%;
+    max-width: calc(4rem * 5 + (2rem * 4));
+    
+}
+
+.col.--6 {
+    width: 100%;
+    max-width: calc(4rem * 6 + (2rem * 5));
+    
+}
+
+.col.--7 {
+    width: 100%;
+    max-width: calc(4rem * 7 + (2rem * 6));
+    
+}
+
+.col.--8 {
+    width: 100%;
+    max-width: calc(4rem * 8 + (2rem * 7));
+    
+}
+
+.col.--9 {
+    width: 100%;
+    max-width: calc(4rem * 9 + (2rem * 8));
+    
+}
+
+.col.--10 {
+    width: 100%;
+    max-width: calc(4rem * 10 + (2rem * 9));
+    
+}
+
+.col.--11 {
+    width: 100%;
+    max-width: calc(4rem * 11 + (2rem * 10));
+    
+}
+
+.col.--12 {
+    width: 100%;
+    max-width: calc(4rem * 12 + (2rem * 11));
+    
+}
+
+.col.--13 {
+    width: 100%;
+    max-width: calc(4rem * 13 + (2rem * 12));
+    
+}
+
+.col.--14 {
+    width: 100%;
+    max-width: calc(4rem * 14 + (2rem * 13));
+    
+}
+
+.col.--15 {
+    width: 100%;
+    max-width: calc(4rem * 15 + (2rem * 14));
+    
+}
+
+.col.--16 {
+    width: 100%;
+    max-width: calc(4rem * 16 + (2rem * 15));
+    
+}
+
+
+
+
+@media screen and (max-width: 1680px) {  
+
+}
+
+@media screen and (max-width: 1440px) {  
+
+}
+
+@media screen and (max-width: 1359px) {  
+
+}
+
+@media screen and (max-width: 1199px) {  
+
+
+    .col.--1 {
+        width: 100%;
+        max-width: 4rem;
+
+        
+    }
+
+    .col.--2 {
+        width: 100%;
+        max-width: calc(4rem * 2 + (2rem));
+
+        
+    }
+
+    .col.--3 {
+        width: 100%;
+        max-width: calc(4rem * 3 + (2rem * 2));
+
+        
+    }
+
+    .col.--4 {
+        width: 100%;
+        max-width: calc(4rem * 4 + (2rem * 3));
+
+    }
+
+    .col.--5 {
+        width: 100%;
+        max-width: calc(4rem * 5 + (2rem * 4));
+
+    }
+
+    .col.--6 {
+        width: 100%;
+        max-width: calc(4rem * 6 + (2rem * 5));
+
+    }
+
+    .col.--7 {
+        width: 100%;
+        max-width: calc(4rem * 7 + (2rem * 6));
+
+    }
+
+    .col.--8 {
+        width: 100%;
+        max-width: calc(4rem * 8 + (2rem * 7));
+
+    }
+
+    .col.--9 {
+        width: 100%;
+        max-width: calc(4rem * 9 + (2rem * 8));
+
+    }
+
+    .col.--10 {
+        width: 100%;
+        max-width: calc(4rem * 10 + (2rem * 9));
+
+    }
+
+    .col.--11 {
+        width: 100%;
+        max-width: calc(4rem * 11 + (2rem * 10));
+
+    }
+
+    .col.--12 {
+        width: 100%;
+        max-width: calc(4rem * 12 + (2rem * 11));
+
+    }
+
+    .col.--13 {
+        width: 100%;
+        max-width: calc(4rem * 13 + (2rem * 12));
+
+    }
+
+    .col.--14 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--15 {
+        width: 100%;
+        max-width: 100%;
+
+        
+    }
+    
+    .col.--16 {
+        width: 100%;
+        max-width: 100%;
+
+        
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {  
+
+}
+
+@media screen and (max-width: 991px) {  
+    
+    .col.--1 {
+        width: 100%;
+        max-width: 4rem;
+
+        
+    }
+
+    .col.--2 {
+        width: 100%;
+        max-width: calc(4rem * 2 + (2rem));
+
+        
+    }
+
+    .col.--3 {
+        width: 100%;
+        max-width: calc(4rem * 3 + (2rem * 2));
+
+        
+    }
+
+    .col.--4 {
+        width: 100%;
+        max-width: calc(4rem * 4 + (2rem * 3));
+
+    }
+
+    .col.--5 {
+        width: 100%;
+        max-width: calc(4rem * 5 + (2rem * 4));
+
+    }
+
+    .col.--6 {
+        width: 100%;
+        max-width: calc(4rem * 6 + (2rem * 5));
+
+    }
+
+    .col.--7 {
+        width: 100%;
+        max-width: calc(4rem * 7 + (2rem * 6));
+
+    }
+
+    .col.--8 {
+        width: 100%;
+        max-width: calc(4rem * 8 + (2rem * 7));
+
+    }
+
+    .col.--9 {
+        width: 100%;
+        max-width: calc(4rem * 9 + (2rem * 8));
+
+    }
+
+    .col.--10 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--11 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--12 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--13 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--14 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--15 {
+        width: 100%;
+        max-width: 100%;
+
+        
+    }
+    
+    .col.--16 {
+        width: 100%;
+        max-width: 100%;
+
+        
+    }
+
+}    
+
+@media screen and (max-width: 768px) {  
+
+}
+
+@media screen and (max-width: 640px) {  
+
+    .cols {
+        margin-right: 0rem;
+    }
+
+    .col.--1 {
+        width: 100%;
+        max-width: 4rem;
+
+        
+    }
+
+    .col.--2 {
+        width: 100%;
+        max-width: calc(4rem * 2 + (2rem));
+
+    }
+
+    .col.--3 {
+        width: 100%;
+        max-width: calc(4rem * 3 + (2rem * 2));
+
+    }
+
+    .col.--4 {
+        width: 100%;
+        max-width: calc(4rem * 4 + (2rem * 3));
+
+    }
+
+    .col.--5 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--6 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--7 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--8 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--9 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--10 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--11 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--12 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--13 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--14 {
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .col.--15 {
+        width: 100%;
+        max-width: 100%;
+
+        
+    }
+    
+    .col.--16 {
+        width: 100%;
+        max-width: 100%;
+
+        
+    }
+
+
+}

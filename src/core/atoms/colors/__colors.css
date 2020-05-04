@@ -1,0 +1,33 @@
+/** @format */
+
+:root {
+	/* main */
+	--color__dark: #44545f;
+	--color__white: #ffffff;
+
+	/* fill */
+	--color__fill-1: #ce0058;
+	--color__fill-2: #818d92;
+	--color__fill-3: #53eae0;
+	--color__fill-4: #f0f1f2;
+	--color__fill-1-h: #a80048;
+	--color__fill-2-h: #5f676b;
+	--color__fill-3-h: #4ad1c8;
+	--color__fill-4-h: #e1e2e3;
+	--color__fill-1-a: #800036;
+	--color__fill-2-a: #484f52;
+	--color__fill-3-a: #389e97;
+	--color__fill-4-a: #cdcecf;
+
+	/* border */
+	--color__border: #e6e6e6;
+
+	/* text */
+	--color__text-1: #41474a;
+	--color__text-2: #5f676b;
+	--color__text-3: #818d92;
+
+	/* gray */
+	--color__gray-1: #f5f5f9;
+	--color__gray-2: #fafafc;
+}

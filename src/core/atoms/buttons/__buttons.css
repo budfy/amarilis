@@ -1,0 +1,180 @@
+.btn {
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    outline:  none;
+    border:  0rem;
+    border-radius:  0rem;
+    text-decoration:  none;
+    transition:  all ease 0.24s;
+    cursor:  pointer;
+    padding: 0rem 2.5rem;
+    height: 3.5rem;
+    font-size: 1rem;
+    border-radius: .375rem;
+}
+.btn:active {
+    transform:scale(.95);
+}
+
+.btn.--fill-1 {
+    background-color: var(--color__fill-1);
+    font-weight: 700;
+    color:  var(--color__white);
+}
+
+.btn.--fill-1:hover {
+    background-color: var(--color__fill-1-h);
+}
+
+.btn.--fill-1:active {
+    background-color: var(--color__fill-1-a);
+}
+
+.btn.--fill-2 {
+    background-color: var(--color__fill-2);
+    font-weight: 700;
+    color:  var(--color__white);
+}
+
+.btn.--fill-2:hover {
+    background-color: var(--color__fill-1);
+}
+
+.btn.--fill-2:active {
+    background-color: var(--color__fill-1-a);
+}
+
+
+.btn.--border-1 {
+    font-weight: 700;
+    color: var(--color__fill-1);
+    box-shadow: inset 0rem 0rem 0rem 0.1875rem var(--color__fill-1);
+}
+
+.btn.--border-1:hover {
+    background-color: var(--color__fill-1);
+    box-shadow: inset 0rem 0rem 0rem 0.1875rem var(--color__fill-1);
+    color: var(--color__white);
+}
+
+.btn.--border-1:active {
+    background-color: var(--color__fill-1-a);
+    box-shadow: inset 0rem 0rem 0rem 0.1875rem var(--color__fill-1-a);
+}
+
+
+.btn.--border-2 {
+    font-weight: 700;
+    color: var(--color__fill-2);
+    box-shadow: inset 0rem 0rem 0rem 0.1875rem var(--color__fill-2);
+}
+
+.btn.--border-2:hover {
+    background-color: var(--color__fill-2);
+    box-shadow: inset 0rem 0rem 0rem 0.1875rem var(--color__fill-2);
+    color: var(--color__white);
+}
+
+.btn.--border-2:active {
+    background-color: var(--color__fill-2-a);
+    box-shadow: inset 0rem 0rem 0rem 0.1875rem var(--color__fill-2-a);
+}
+
+
+.btn.--border-white {
+    font-weight: 700;
+    color: white;
+    box-shadow: inset 0rem 0rem 0rem 0.1875rem white;
+}
+
+.btn.--border-white:hover {
+    background-color: white;
+    box-shadow: inset 0rem 0rem 0rem 0.1875rem white;
+    color: var(--color__dark);
+}
+
+.btn.--border-white:active {
+    background-color: white);
+    box-shadow: inset 0rem 0rem 0rem 0.1875rem white);
+}
+
+
+
+.btn.--no-fill {
+    background-color: transparent;
+    font-weight: 700;
+    color: var(--color__fill-1);
+}
+
+.btn.--no-fill:hover {
+    background-color: var(--color__fill-1);
+    color: white;
+}
+
+.btn.--no-fill:active {
+    background-color: var(--color__fill-1-a);
+}
+
+.btn.--xxl {
+    height: 5.5rem;
+    padding: 0px 3rem;
+    font-size: 1.25rem;
+}
+
+.btn.--xl {
+    height: 4.5rem;
+    padding: 0px 3rem;
+    font-size: 1.125rem;
+}
+
+.btn.--l {
+    height: 4rem;
+    padding: 0px 2.5rem;
+}
+
+.btn.--m {
+    height: 3rem;
+    padding: 0px 1.5rem;
+    font-size: .875rem;
+}
+
+.btn.--s {
+    height: 2.5rem;
+    padding: 0px 1.25rem;
+    font-size: .75rem;
+}
+
+.btn.--fill-1.--xl, .btn.--fill-1.--xxl, .btn.--fill-1.--l {
+    /* box-shadow: 0.5rem 0.5rem 1.5rem rgba(245, 37, 54, 0.24); */
+}
+
+.btn.--fill-2.--xl {
+    /* box-shadow: 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.16); */
+}
+
+
+@media screen and (max-width: 1024px) {  
+
+}
+
+@media screen and (max-width: 990px) {      
+
+
+}    
+
+@media screen and (max-width: 768px) {  
+
+}
+
+@media screen and (max-width: 640px) {  
+    .btn.--xl {
+        height: 4.5rem;
+        padding: 0px 2rem;
+        font-size: 1.125rem;
+    }
+    .btn {
+        text-align: center;
+    }
+
+}

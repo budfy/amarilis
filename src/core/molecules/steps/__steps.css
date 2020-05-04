@@ -1,0 +1,86 @@
+.steps {
+    margin: 3rem auto;
+}
+
+.steps__step {
+    margin: 0px auto;
+    width: 100%;
+    align-items: stretch;
+}
+
+.steps__numb {
+    width: 3.5rem;
+    position: relative;
+}
+
+.steps__numb div {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3.5rem;
+    background-color: var(--color__fill-1);
+    color: white;
+    font-size: 1.5rem;
+    z-index: 2;
+    position: relative;
+    font-weight: 700;
+}
+
+.steps__numb:after {
+    content: "";
+    width: 0.25rem;
+    height: calc(100% - 0.0rem);
+    position: absolute;
+    left: 1.625rem;
+    top: 3.5px;
+    z-index: 0;
+    /* background-color: var(--color__fill-1); */
+    background: var(--color__fill-1);
+}
+
+.steps__desc {
+    flex: 1;
+    padding-left: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.steps__desc h2:first-child, .steps__desc h3:first-child, .steps__desc h4:first-child, .steps__desc h5:first-child, .steps__desc p:first-child {
+    margin-top: 0.75rem !important;
+    margin-bottom: 1.5rem;
+}
+
+.steps__step:last-child .steps__numb:after {
+    display: none;
+}
+
+.step__step:last-child .steps__desc {
+    padding-bottom: 0px;
+}
+
+.type-editor .steps:last-child {
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1024px) {  
+
+}
+
+@media screen and (max-width: 990px) {      
+
+
+}    
+
+@media screen and (max-width: 768px) {  
+
+}
+
+@media screen and (max-width: 640px) {  
+
+    .steps__desc {
+        padding-left: 1.5rem;
+    }
+    
+}
+

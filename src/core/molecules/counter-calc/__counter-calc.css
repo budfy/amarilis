@@ -1,0 +1,83 @@
+.counter-calc__btn {
+    padding: 0px;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-left: 1px solid var(--color__border);
+    border-radius: 0px;
+    border-bottom: 1px solid var(--color__border);
+    color: var(--color__dark) !important;
+}
+
+.counter-calc__btn img {
+    width: 1rem;
+}
+.counter-calc__input {
+    outline: none;
+    pointer-events: none;
+    width: 4.5rem;
+    height: 3rem;
+    border: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--colo__text-1);
+    background-color: transparent;
+    border: 1px solid var(--color__border);
+    padding-right: 1.5rem;
+}
+
+.counter-calc {
+    /* padding: .5rem; */
+    /* background-color: var(--color__gray-1); */
+    position: relative;
+}
+.counter-calc__btn:hover {
+    color: white !important;
+}
+
+.counter-calc__btns {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/* media */
+
+    @media screen and (max-width: 1680px) {  
+
+    }
+
+    @media screen and (max-width: 1440px) {  
+
+    }
+
+    @media screen and (max-width: 1366px) {  
+
+    }
+
+    @media screen and (max-width: 1359px) {  
+
+    }
+
+    @media screen and (max-width: 1199px) {  
+
+    }
+
+    @media screen and (max-width: 1024px) {  
+
+
+    }
+
+    @media screen and (max-width: 991px) {  
+        
+    }
+
+    @media screen and (max-width: 768px) {  
+
+    }
+
+    @media screen and (max-width: 640px) {  
+
+    }

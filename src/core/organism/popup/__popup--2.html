@@ -1,0 +1,50 @@
+<div class="flex">
+	<a href="#feedback" data-popup="#feedback" data-popup-title="Заголовок" data-popup-value="Значение" class="btn --border-2"><span>Открыть окно</span></a>
+</div>
+
+<div class="popup" id="feedback">
+	<div class="popup__wrap">
+		<div class="popup__content --feedback">
+			<div class="popup__close js-popup__close"></div>
+			<h3><b class="js-title--text">Форма связи</b></h3>
+			<h5 class="mt-0"><b class="js-value--text"></b></h5>
+			<input type="hidden" name="title" class="js-title--val">
+			<input type="hidden" name="value" class="js-value--val">
+			<input type="hidden" name="utm" class="js-utm">
+			<div class="order__form">
+				<form action="#" method="get" name="form-1">
+					<div class="flex --just-space">
+						<div class="input__wrap --2-coll">
+							<div class="input__title">Ваше имя:</div>
+							<div class="input__error">error</div>
+							<input name="name" class="input --text" type="text" placeholder="Ваше имя:">
+						</div>	
+						<div class="input__wrap --2-coll">
+							<div class="input__title">Телефон:</div>
+							<div class="input__error">error</div>
+							<input name="tell" class="input --text js-mask" type="text" placeholder="+7 (___) ___-__-__">
+						</div>	
+					</div>
+					<div class="input__wrap">
+						<div class="input__title">Сообщение</div>
+						<div class="input__error">error</div>
+						<textarea name="message" class="input --textarea" placeholder="Введите Ваше сообщение"></textarea>
+					</div>	
+					<div class="flex">
+						<button type="send" class="order__btn btn --fill-1 --fix-white-bg feedback btn-success --xl"><span>Отправить</span></button>
+					</div>
+					<div class="flex --just-center mt-16">
+						<label class="checkbox">
+							<input type="checkbox" checked="checked" required name="private">
+							<div class="flex --align-center">
+								<div class="checkbox__trigger"></div>
+								<div class="checkbox__label p --xs ml-16">Даю согласие на <a href="#personal" data-link="#personal" class="js-popup">обработку персональных данных</a></div>
+							</div>
+						</label>	
+					</div>	
+				</form>
+			</div>
+		</div>
+		<div class="popup__shade js-popup__close"></div>
+	</div>
+</div>
