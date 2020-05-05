@@ -3,6 +3,10 @@
 html {
 	box-sizing: border-box;
 	font-size: 16px;
+
+	@media screen and (max-width: 600px) {
+		font-size: 12px;
+	}
 }
 
 *,
@@ -65,10 +69,14 @@ input:focus {
 	outline: transparent;
 }
 
+main {
+	overflow: visible;
+}
+
 .container {
 	margin: 0 auto;
-	max-width: 1380px;
-	padding: 0 30px;
+	max-width: 86.25rem;
+	padding: 0 1.875rem;
 }
 
 .--round-bdr {
@@ -86,6 +94,14 @@ input:focus {
 
 .container-fluid {
 	padding: 0 4rem;
+
+	@media screen and (max-width: 800px) {
+		padding: 0 3rem;
+	}
+
+	@media screen and (max-width: 600px) {
+		padding: 0;
+	}
 }
 
 .attention-btn {
@@ -103,7 +119,7 @@ input:focus {
 .section-title {
 	font-family: Montserrat Alternates;
 	font-weight: 600;
-	font-size: 40px;
+	font-size: 2.5rem;
 	line-height: 1.2;
 	text-align: center;
 }
