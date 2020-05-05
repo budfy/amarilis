@@ -96,6 +96,7 @@ gulp.task("style", function () {
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
 			"libs/swiper/swiper.min.css",
+			"libs/fancybox/jquery.fancybox.min.css"
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -129,6 +130,7 @@ gulp.task("script", function () {
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
 			"libs/swiper/swiper.min.js",
+			"libs/fancybox/jquery.fancybox.min.js"
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
@@ -273,39 +275,41 @@ gulp.task("images", function () {
 	//пережимаем изображения и складываем их в директорию build
 	return (
 		gulp
-			.src("src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)")
-			.pipe(size())
-			.pipe(
-				cache(
-					imagemin({
-						interlaced: true,
-						progressive: true,
-						svgoPlugins: [{ removeViewBox: false }],
-						use: [pngquant()],
-					}),
-				),
-			)
-			// .pipe(
-			// 	imagemin([
-			// 		recompress({
-			// 			//Настройки сжатия изображений. Сейчас всё настроено так, что сжатие почти незаметно для глаза на обычных экранах. Можете покрутить настройки, но за результат не отвечаю.
-			// 			loops: 4, //количество прогонок изображения
-			// 			min: 70, //минимальное качество в процентах
-			// 			max: 80, //максимальное качество в процентах
-			// 			quality: "high", //тут всё говорит само за себя, если хоть капельку понимаешь английский
-			// 		}),
-			// 		imagemin.gifsicle(), //тут и ниже всякие плагины для обработки разных типов изображений
-			// 		imagemin.optipng(),
-			// 		imagemin.svgo(),
-			// 	]),
-			// )
-			.pipe(gulp.dest("build/img"))
-			.pipe(
-				browserSync.reload({
-					stream: true,
+		.src("src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)")
+		.pipe(size())
+		.pipe(
+			cache(
+				imagemin({
+					interlaced: true,
+					progressive: true,
+					svgoPlugins: [{
+						removeViewBox: false
+					}],
+					use: [pngquant()],
 				}),
-			)
-			.pipe(size())
+			),
+		)
+		// .pipe(
+		// 	imagemin([
+		// 		recompress({
+		// 			//Настройки сжатия изображений. Сейчас всё настроено так, что сжатие почти незаметно для глаза на обычных экранах. Можете покрутить настройки, но за результат не отвечаю.
+		// 			loops: 4, //количество прогонок изображения
+		// 			min: 70, //минимальное качество в процентах
+		// 			max: 80, //максимальное качество в процентах
+		// 			quality: "high", //тут всё говорит само за себя, если хоть капельку понимаешь английский
+		// 		}),
+		// 		imagemin.gifsicle(), //тут и ниже всякие плагины для обработки разных типов изображений
+		// 		imagemin.optipng(),
+		// 		imagemin.svgo(),
+		// 	]),
+		// )
+		.pipe(gulp.dest("build/img"))
+		.pipe(
+			browserSync.reload({
+				stream: true,
+			}),
+		)
+		.pipe(size())
 	);
 });
 

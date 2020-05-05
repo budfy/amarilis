@@ -94,6 +94,7 @@ input:focus {
 	border-radius: 56px;
 	background-color: $rose;
 	color: #ffffff;
+
 	&:hover {
 		box-shadow: none;
 	}
@@ -104,5 +105,9 @@ input:focus {
 	font-weight: 600;
 	font-size: 40px;
 	line-height: 1.2;
+	text-align: center;
+}
+
+.section-description {
 	text-align: center;
 }

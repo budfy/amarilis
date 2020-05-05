@@ -181,14 +181,35 @@ h2.hero-subtitle {
   background-color: #fff;
   box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.06);
 
+  &--xs {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
   &--s {
     width: 2.5rem;
     height: 2.5rem;
   }
 
+
+  &--xm {
+    height: 5.25rem;
+    width: 5.25rem;
+  }
+
+  &--sm {
+    width: 7rem;
+    height: 7rem;
+  }
+
   &--m {
     width: 7.5rem;
     height: 7.5rem;
+  }
+
+  &--ml {
+    width: 8.125rem;
+    height: 8.125rem;
   }
 
   &--l {
@@ -368,10 +389,6 @@ h2.hero-subtitle {
 }
 
 /*BRANDS START*/
-.brands-description {
-  text-align: center;
-}
-
 .brands-item {
   box-shadow: 0px 1rem 3rem rgba(0, 0, 0, 0.06);
   border-radius: 1rem;
@@ -428,25 +445,137 @@ h2.hero-subtitle {
 }
 
 /*BRANDS END*/
-.features {}
 
-.clients {}
+/*FEATURES START*/
+.features-inner {
+  &--left {
+    border-bottom: 0.0625rem solid var(--color__border);
+  }
 
-.delivery {}
+  &--right {
+    border-top: 0.0625rem solid var(--color__border);
+  }
+}
 
-.training {}
+.features-text {
+  max-width: 25rem;
+  line-height: 1.5;
 
-.galery {}
+  &__title {
+    font-size: 20px;
+  }
 
-.about {}
+  &__text {
+    font-size: 16px;
+  }
+}
 
+/*FEATURES END*/
+
+/*CLIENTS START*/
+.clients-slide {
+  box-shadow: 0rem 1rem 3rem rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  height: 8rem;
+
+  &__img {
+    margin: 0.5rem;
+    object-fit: contain;
+  }
+}
+
+/*CLIENTS END*/
+
+/*DELIVERY START*/
+.delivery {
+  background: #F9F9F9;
+  border-radius: 16px;
+}
+
+/*DELIVERY END*/
+
+/*TRAINING START*/
+.training-item {
+  box-shadow: 0px 1rem 3rem rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  width: 19.75rem;
+  text-align: center;
+}
+
+.training-icon {
+  background-color: rgba(206, 0, 89, 0.08);
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto;
+}
+
+.training-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.training-button {
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+
+  &__link {
+    display: inline-flex;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background-color: var(--color__border);
+    @include centering;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+/*TRAINING END*/
+
+/*GALERY START*/
+.galery {
+  .gallery__slide {
+    box-shadow: 0px 1rem 3rem rgba(0, 0, 0, 0.06);
+  }
+}
+
+/*GALERY END*/
+
+/*ABOUT START*/
+.about .about-title {
+  text-align-last: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+/*ABOUT END*/
+
+/*AWARDS START*/
 .awards {}
 
+/*AWARDS END*/
 
-
-
-
+/*QUESTIONS START*/
 .questions {}
 
+/*QUESTIONS END*/
+
+/*FOOTER START*/
+
+/*FOOTER END*/
 
 @import "media";
