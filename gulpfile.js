@@ -129,8 +129,7 @@ gulp.task("script", function () {
 		.src([
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
-			"libs/swiper/swiper.min.js",
-			"libs/fancybox/jquery.fancybox.min.js"
+			"libs/swiper/swiper.min.js"
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())

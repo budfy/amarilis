@@ -132,6 +132,7 @@ $(function () {
 		var this__hash = window.location.hash.replace("#", "");
 		popup__open(this__hash);
 	};
+
 	$(document).ready(function () {
 		popup__ready();
 		$('body').on('click', '*[data-popup]', function () {
