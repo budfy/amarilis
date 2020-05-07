@@ -1,0 +1,14 @@
+{
+    "name": "Amarylis.ru",
+    "short_name": "Amarylis.ru",
+    "icons": [
+        {
+            "src": "android-chrome-48x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#e20177",
+    "background_color": "#e20177",
+    "display": "standalone"
+}

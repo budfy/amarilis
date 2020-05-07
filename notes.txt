@@ -1,0 +1,5 @@
+	let slide_id;
+	$(".brands-button").on("click", function () {
+		slide_id = parseInt($(this).data("slide")) - 1;
+		console.log(slide_id);
+	});

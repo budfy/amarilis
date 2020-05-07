@@ -130,6 +130,7 @@ gulp.task("script", function () {
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
 			"libs/swiper/swiper.min.js",
+			"libs/fancybox/jquery.fancybox.min.js",
 			"libs/inputmask/jquery.maskedinput.js"
 		])
 		.pipe(size())
@@ -275,7 +276,7 @@ gulp.task("images", function () {
 	//пережимаем изображения и складываем их в директорию build
 	return (
 		gulp
-		.src("src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)")
+		.src("src/img/**/*.+(png|jpg|jpeg|gif|svg|ico|webp)")
 		.pipe(size())
 		.pipe(
 			cache(
@@ -360,7 +361,7 @@ gulp.task("browser-sync", function () {
 		server: {
 			baseDir: "build/", //какую папку показывать в браузере
 		},
-		browser: ["chrome"], //в каком браузере
+		browser: ["firefox"], //в каком браузере
 		//tunnel: " ", //тут можно прописать название проекта и дать доступ к нему через интернет. Работает нестабильно, запускается через раз. Не рекомендуется включать без необходимости.
 		//tunnel:true, //работает, как и предыдущяя опция, но присваивает рандомное имя. Тоже запускается через раз и поэтому не рекомендуется для включения
 		host: "192.168.0.104", //IP сервера в локальной сети. Отключите, если у вас DHCP, пропишите под себя, если фиксированный IP в локалке.
