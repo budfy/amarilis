@@ -1,0 +1,87 @@
+/*FEATURES START*/
+.features-inner {
+
+  &--left {
+    border-bottom: 0.0625rem solid var(--color__border);
+    padding-bottom: 3.5rem;
+
+    @media screen and (max-width:1410px) {
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+
+  &--right {
+    border-top: 0.0625rem solid var(--color__border);
+    padding-top: 3rem;
+    margin-top: 3rem;
+
+  }
+
+  @media screen and (max-width:1410px) {
+    padding-top: 0;
+    margin-top: 0;
+    border: none;
+    margin: 0 auto;
+  }
+}
+
+.features-text {
+  max-width: 25rem;
+  line-height: 1.5;
+
+  @media screen and (max-width:1410px) {
+    max-width: unset;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+  }
+}
+
+.features-icon {
+  min-width: 10rem;
+  min-height: 10rem;
+
+  @media screen and (max-width:800px) {
+    min-width: 7rem;
+    min-height: 7rem;
+  }
+
+  @media screen and (max-width:600px) {
+    min-width: 4.2rem;
+    min-height: 4.2rem;
+  }
+}
+
+.features--small {
+  .features-inner {
+    border: none;
+
+    &--left {
+      padding-bottom: 3.5rem;
+
+      @media screen and (max-width:1410px) {
+        padding-bottom: 0;
+      }
+    }
+
+    &--right {
+      padding-top: 3rem;
+      margin-top: 3rem;
+
+    }
+
+    @media screen and (max-width:1410px) {
+      padding-top: 0;
+      margin-top: 0;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*FEATURES END*/

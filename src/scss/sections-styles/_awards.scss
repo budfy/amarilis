@@ -1,0 +1,15 @@
+/*AWARDS START*/
+.awards-slide {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  height: 20.625rem;
+
+
+  &__img {
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    object-fit: contain;
+  }
+}
+
+/*AWARDS END*/

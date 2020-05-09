@@ -1,0 +1,21 @@
+/*GALERY START*/
+.galery {
+  .gallery__slide {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
+  }
+
+  .gallery__coll {
+    width: calc((100%) - .5rem);
+  }
+
+  & .gallery__pic {
+    border-radius: 1rem;
+    margin: .5rem 0;
+
+    &.--min {
+      width: calc((100% / 2) - .5rem);
+    }
+  }
+}
+
+/*GALERY END*/

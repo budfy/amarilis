@@ -1,0 +1,353 @@
+/*FOOTER START*/
+.contact {
+  height: 45rem;
+  position: relative;
+}
+
+.contact-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #41474A;
+  border-radius: 3.5rem;
+  padding: 0.75rem 2.5rem;
+  font-family: Montserrat Alternates;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #ffffff;
+  z-index: 1;
+  width: intrinsic;
+  width: -webkit-fit-content;
+  width: fit-content;
+  top: 2rem;
+}
+
+.contact-map {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-wrapper {
+  background-color: #fff;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1.25rem 1.3rem 1.25rem;
+    border-color: transparent transparent #ffffff transparent;
+    top: -1.25rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+.contact-row {
+  &--top {
+    border-bottom: 0.0625rem solid #E6E6E6;
+  }
+
+  &--bottom {
+    font-style: normal;
+  }
+}
+
+.contact .contact-item {
+  min-width: 11.25rem;
+
+  &__title {
+    display: block;
+    color: var(--color__text-2);
+  }
+
+  &__link {
+    display: block;
+    color: var(--color__dark);
+  }
+}
+
+.basement {
+  background: #656F73;
+}
+
+.basement-wrapper {
+
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='1312' height='248' viewBox='0 0 1312 248' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.04'%3E%3Cpath d='M178.861 70.1744C184.365 76.3664 185.053 83.2463 185.053 83.2463C198.124 66.7344 213.26 59.8545 232.524 59.8545C255.916 59.8545 271.052 68.1104 279.308 83.9343C292.38 68.7984 309.58 59.8545 330.22 59.8545C366.683 59.8545 383.883 80.4944 383.883 118.334C383.883 118.334 382.507 174.062 385.259 180.254C389.387 192.638 395.579 193.326 399.707 196.766L392.827 194.702C392.827 194.702 364.619 195.39 361.179 180.942C357.739 165.806 358.427 116.958 358.427 116.958C358.427 93.5663 352.235 79.1184 329.532 79.1184C309.58 79.1184 296.508 86.6863 284.812 101.822C285.5 106.638 286.188 111.454 286.188 116.958V194.702H261.42V116.958C261.42 93.5663 255.228 79.1184 232.524 79.1184C211.884 79.1184 199.5 87.3743 187.116 102.51V194.702H162.349V61.9185C161.661 61.9185 172.669 63.9825 178.861 70.1744Z' fill='white'/%3E%3Cpath d='M573.096 69.4879C577.912 75.6799 579.288 82.5598 579.288 82.5598C592.359 66.0479 606.807 59.168 625.383 59.168C643.959 59.168 654.967 63.9839 666.663 78.4318L650.151 93.5677C642.583 83.9358 632.951 79.8078 623.319 79.8078C603.367 79.8078 592.359 87.3758 581.352 103.2V194.703H556.584V61.92C555.896 61.92 568.28 63.9839 573.096 69.4879Z' fill='white'/%3E%3Cpath d='M673.546 90.8153L712.073 168.559H713.449L753.353 61.2314H780.185L714.825 220.158C707.945 237.358 691.433 247.678 672.858 247.678C665.978 247.678 661.85 246.302 654.97 244.238L658.41 224.974C661.85 225.662 665.29 226.35 668.73 226.35C681.114 226.35 690.057 222.222 696.249 207.774L701.065 196.079L658.41 105.951L673.546 90.8153Z' fill='white'/%3E%3Cpath d='M819.415 10.3199C827.671 19.2639 826.983 32.3358 826.983 32.3358V155.487C826.983 168.559 831.799 173.375 846.247 173.375V196.079C844.183 196.079 842.119 196.767 840.055 196.767C811.847 196.767 802.215 180.255 802.215 152.735V0C802.215 0 811.159 1.37599 819.415 10.3199Z' fill='white'/%3E%3Cpath d='M900.576 23.3908C900.576 32.3347 894.384 39.9027 883.376 39.9027C872.368 39.9027 866.176 31.6467 866.176 23.3908C866.176 14.4469 872.368 6.87891 883.376 6.87891C893.696 6.87891 900.576 14.4469 900.576 23.3908ZM895.072 63.9825V197.454H870.304V63.9825H895.072Z' fill='white'/%3E%3Cpath d='M1016.17 86.6863C1002.41 80.4943 990.027 78.4304 975.579 78.4304C952.187 78.4304 942.555 85.9983 942.555 96.3182C942.555 109.39 954.939 112.83 978.331 115.582C1011.35 119.022 1030.62 130.03 1030.62 157.55C1030.62 185.07 1005.85 198.142 967.323 198.142C948.059 198.142 934.299 196.078 918.476 189.198L924.668 169.246C938.427 175.438 951.499 178.878 965.947 178.878C993.467 178.878 1007.23 171.998 1007.23 157.55C1007.23 144.478 998.283 139.662 970.763 136.91C936.363 133.47 919.164 122.462 919.164 98.3822C919.164 77.0544 937.739 59.8545 976.267 59.8545C995.531 59.8545 1007.23 61.9185 1023.74 68.1104L1016.17 86.6863Z' fill='white'/%3E%3Cpath d='M7.56795 68.111C27.5198 59.855 41.9677 56.415 64.6716 56.415C103.887 56.415 122.463 70.1749 122.463 102.511V158.238C122.463 171.31 125.903 174.75 138.975 174.75V192.638C132.783 194.702 128.655 195.39 121.087 195.39C110.079 195.39 103.199 187.134 102.511 173.374C90.1274 187.822 72.2395 195.39 47.4717 195.39C16.5119 195.39 0 179.566 0 154.798C0 143.102 3.43998 133.471 12.3839 123.151C36.4638 115.583 60.5436 107.327 98.3833 106.639L97.6953 93.5668C97.6953 85.9988 90.1274 77.0549 63.9836 77.0549C47.4717 77.0549 30.9598 80.4949 13.7599 88.0628L7.56795 68.111ZM98.3833 119.023C67.4235 119.711 44.0317 123.151 30.2718 136.223C26.1438 140.35 24.7678 145.854 24.7678 152.046C24.7678 166.494 34.3998 174.062 50.9117 174.062C68.7995 174.062 83.2474 169.246 98.3833 156.174V119.023Z' fill='white'/%3E%3Cpath d='M107.323 119.711C98.3787 120.399 86.6828 119.711 79.1149 121.087C58.475 124.527 37.1471 123.151 22.0112 143.102C26.1392 129.342 1.37139 134.158 10.3153 124.527C29.5792 104.575 85.9948 99.7587 109.387 98.3827C121.083 97.6947 160.986 80.4948 161.674 61.9189C165.114 86.6868 148.602 101.823 143.786 105.951C135.53 112.831 127.963 116.271 114.203 119.711' fill='white'/%3E%3Cpath d='M403.165 68.111C423.117 59.855 437.564 56.415 460.268 56.415C499.484 56.415 518.06 70.1749 518.06 102.511V158.238C518.06 171.31 521.5 174.75 534.572 174.75V192.638C528.38 194.702 524.252 195.39 516.684 195.39C505.676 195.39 498.796 187.134 498.108 173.374C485.724 187.822 467.836 195.39 443.068 195.39C412.109 195.39 395.597 179.566 395.597 154.798C395.597 143.102 399.037 133.471 407.981 123.151C432.06 115.583 456.14 107.327 493.98 106.639L493.292 93.5668C493.292 85.9988 485.724 77.0549 459.58 77.0549C443.068 77.0549 426.556 80.4949 409.357 88.0628L403.165 68.111ZM493.292 119.023C462.332 119.711 438.94 123.151 425.18 136.223C421.053 140.35 419.677 145.854 419.677 152.046C419.677 166.494 429.308 174.062 445.82 174.062C463.708 174.062 478.156 169.246 493.292 156.174V119.023Z' fill='white'/%3E%3Cpath d='M502.924 119.711C493.98 120.399 482.284 119.711 474.716 121.087C454.076 124.527 432.748 123.151 417.612 143.102C421.74 129.342 396.972 134.158 405.916 124.527C425.18 104.575 481.596 99.7587 504.988 98.3827C516.684 97.6947 556.587 80.4948 557.275 61.9189C560.715 86.6868 544.203 101.823 539.387 105.951C531.132 112.831 523.564 116.271 509.804 119.711' fill='white'/%3E%3Cpath d='M1069.84 181.63C1069.84 187.822 1065.71 192.638 1058.83 192.638C1051.95 192.638 1047.82 187.822 1047.82 181.63C1047.82 175.438 1051.95 170.622 1058.83 170.622C1065.71 170.622 1069.84 175.438 1069.84 181.63Z' fill='white'/%3E%3Cpath d='M1140.7 67.4238C1165.46 67.4238 1182.66 80.4957 1182.66 101.824C1182.66 115.584 1173.03 129.343 1153.77 134.159L1191.61 191.263H1174.41L1139.32 136.223H1106.3V191.263H1091.85V67.4238H1140.7ZM1106.3 124.527H1137.94C1155.83 124.527 1168.22 116.959 1168.22 101.824C1168.22 86.6877 1157.21 79.8077 1137.26 79.8077H1105.61V124.527H1106.3Z' fill='white'/%3E%3Cpath d='M1223.25 67.4238V137.599C1223.25 167.871 1237.7 181.631 1260.4 181.631C1283.1 181.631 1297.55 167.183 1297.55 137.599V67.4238H1312V136.223C1312 176.127 1292.05 194.015 1260.4 194.015C1228.75 194.015 1208.8 176.127 1208.8 136.223V67.4238H1223.25Z' fill='white'/%3E%3C/g%3E%3C/svg%3E");
+  @include background;
+  background-size: contain;
+  background-position: center bottom;
+}
+
+.basement-row.flex {
+  @media screen and (max-width: 1023px) {
+    flex-wrap: wrap;
+  }
+}
+
+.basement-logo {
+  height: 100%;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.12);
+
+  @media screen and (max-width: 1023px) {
+    margin: 0 auto;
+    border-bottom: none;
+  }
+}
+
+.subscribe-label {
+  display: block;
+}
+
+.basement-row .basement-subscribe {
+  &__input {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.125rem 1.75rem;
+    border: none;
+    color: #ffffff;
+    width: 100%;
+
+    &::placeholder {
+      font-family: Montserrat Alternates;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+      color: rgba(255, 255, 255, 0.32);
+    }
+  }
+
+  &__text {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 1023px) {
+      max-width: unset;
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    max-width: unset;
+  }
+}
+
+.subscribe-wrapper {
+  position: relative;
+}
+
+.subscribe-btn {
+  position: absolute;
+  right: 0.5rem;
+  @include centering;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+}
+
+.basement-checkbox {
+
+  .checkbox__trigger {
+    background-color: rgba(255, 255, 255, 0.24);
+    box-shadow: none;
+  }
+
+  .checkbox__label {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  & input:focus+*>.checkbox__trigger {
+    background-color: rgba(255, 255, 255, 0.34);
+  }
+
+  & input:focus+*>.checkbox__label {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  & input:checked+*>.checkbox__trigger {
+    background-color: rgba(255, 255, 255, 0.24);
+    opacity: 0.7;
+  }
+
+  & input:checked+*>.checkbox__label {
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
+
+.--white-text,
+.--white-text a {
+  color: var(--color__white);
+}
+
+.--op-5 {
+  opacity: .5;
+}
+
+.basement-row .basement-item {
+  @media screen and (max-width: 1100px) {
+    width: 50%;
+    max-width: unset;
+
+    &--separator {
+      display: none;
+    }
+  }
+
+  &.basement-item--social {
+    @media screen and (max-width: 550px) {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.basement-item {
+  margin-top: 2rem;
+}
+
+.basement-social__title {
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.social-list__item {
+  max-width: 20%;
+
+  svg {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.basement-copyright {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.basement-rules {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.basement-links__item {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.basement-contact {
+  font-style: normal;
+
+  & span,
+  & a {
+    display: block;
+  }
+
+  &__title {
+    font-size: 0.875rem;
+    line-height: 1.43;
+  }
+
+  &__whatsapp {
+    font-family: Montserrat Alternates;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.33;
+
+    & svg {
+      display: inline-block;
+    }
+  }
+
+  &__phone {
+    font-family: Montserrat Alternates;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    opacity: 0.32;
+
+    & span {
+      font-size: 0.75rem;
+      opacity: 0.2;
+      display: inline-block;
+    }
+  }
+
+  &__email {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    opacity: 0.5;
+    font-weight: 400;
+
+    &--small {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  &__address {
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    opacity: 0.4;
+    font-weight: 400;
+  }
+}
+
+.basement-row .basement-icons {
+  @media screen and (max-width: 1100px) {
+    width: 70%;
+    max-width: unset;
+
+    &__item {
+      max-width: 20%;
+      margin: 0 2.5%;
+
+      & svg {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
+}
+
+.basement-row .basement-disclamer {
+  color: var(--color__white);
+
+  @media screen and (max-width: 1100px) {
+    width: 25%;
+    max-width: unset;
+  }
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/*FOOTER END*/

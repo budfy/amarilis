@@ -1,0 +1,39 @@
+.also {
+  .also-desc {
+    font-family: Montserrat Alternates, sans-serif;
+    margin: 0;
+    opacity: 0.5;
+  }
+
+  .also-title {
+    margin: 0;
+  }
+}
+
+.also-link {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    @include centering;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='16' viewBox='0 0 11 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L8 8L2 14' stroke='%23CE0058' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    width: 0.625rem;
+    height: 1rem;
+  }
+}
+
+.also-row {
+  & .round--l {
+    margin: 0 1.25rem;
+  }
+
+  & .round--xl {
+    margin: 0 0.3125rem;
+  }
+
+  &--bottom {
+    margin-bottom: -3.5rem;
+  }
+}

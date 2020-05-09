@@ -1,0 +1,94 @@
+/*TRAINING START*/
+.training-wrapper {
+  @media screen and (max-width: 680px) {
+    flex-wrap: wrap;
+    margin-left: -1rem;
+  }
+
+  @media screen and (max-width: 535px) {
+    flex-direction: column;
+    margin-left: 0;
+  }
+}
+
+.training-item {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  max-width: 19.75rem;
+  width: 25%;
+  text-align: center;
+  padding: 4rem 3rem;
+  min-height: 18.5rem;
+
+  &+& {
+    margin-left: 1rem;
+
+    @media screen and (max-width: 535px) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    width: 50%;
+    padding: 2rem 1.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  @media screen and (max-width: 535px) {
+    margin: 0 auto;
+  }
+}
+
+.training-icon {
+  background-color: rgba(206, 0, 89, 0.08);
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto;
+}
+
+.training-text {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.training-button {
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+
+  &__link {
+    display: inline-flex;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 0.0625rem;
+    background-color: var(--color__border);
+    @include centering;
+
+    @media screen and (max-width: 1400px) {
+      width: 30%;
+    }
+
+    @media screen and (max-width: 440px) {
+      width: 20%;
+    }
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+/*TRAINING END*/

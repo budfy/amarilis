@@ -1,0 +1,383 @@
+/*HERO START*/
+.hero {
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 1rem;
+  background-image: url(../img/hero-bg.svg);
+  background-size: auto 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: auto;
+}
+
+.hero-text {
+  max-width: 40rem;
+}
+
+h1.hero-title {
+  margin-bottom: 0.25rem;
+  color: var(--color__fill-1);
+}
+
+h2.hero-subtitle {
+  margin-top: 0;
+  font-size: 2.25rem;
+  line-height: 1.17;
+}
+
+.hero__title {
+  font-size: 2.1rem;
+  line-height: 1.17;
+  color: var(--color__dark);
+
+  &-accent {
+    color: var(--color__fill-1);
+  }
+}
+
+.hero .hero-list {
+  list-style: none;
+
+  &__item {
+    padding-left: 4rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+    &>strong {
+      font-weight: 600;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      @include centering;
+      @include background;
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url(../img/icons/soap.svg);
+    }
+
+    &:nth-child(2)::before {
+      background-image: url(../img/icons/virus.svg);
+    }
+
+    &:nth-child(3)::before {
+      background-image: url(../img/icons/water-drop.svg);
+    }
+
+    &:nth-child(4)::before {
+      background-image: url(../img/icons/shopping-cart.svg);
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.hero-propose {
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    position: relative;
+    max-width: 16.5rem;
+    margin-right: 6.5rem;
+
+    & strong {
+      color: var(--color__fill-1);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10.5rem;
+      height: 2.75rem;
+      right: -6rem;
+      text-outline: -1.5rem;
+      @include background;
+      background-image: url("data:image/svg+xml,%3Csvg width='175' height='51' viewBox='0 0 175 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.24' d='M94.5 31.2184L93.7941 30.5101L94.5 31.2184ZM174.336 11.1857C174.856 11 175.128 10.4278 174.942 9.90766L171.915 1.43199C171.729 0.911877 171.157 0.640828 170.637 0.826581C170.117 1.01234 169.845 1.58455 170.031 2.10466L172.722 9.63859L165.188 12.3293C164.668 12.515 164.397 13.0873 164.583 13.6074C164.768 14.1275 165.341 14.3985 165.861 14.2128L174.336 11.1857ZM4.22307 26.8736C4.64331 27.3922 5.06866 27.9025 5.49896 28.4044L7.01732 27.1026C6.5991 26.6148 6.18558 26.1187 5.77693 25.6144L4.22307 26.8736ZM8.16673 31.3443C9.09187 32.3074 10.0366 33.2348 10.9994 34.1266L12.3584 32.6593C11.4243 31.7941 10.5074 30.8939 9.60903 29.9588L8.16673 31.3443ZM13.9937 36.7381C15.0271 37.5859 16.0785 38.3954 17.1462 39.1663L18.3169 37.5447C17.2827 36.798 16.264 36.0137 15.2622 35.1918L13.9937 36.7381ZM20.4436 41.3927C21.5727 42.1041 22.7173 42.7746 23.8758 43.4041L24.8307 41.6469C23.7101 41.0379 22.6026 40.3891 21.5097 39.7006L20.4436 41.3927ZM27.4312 45.1882C28.6425 45.7469 29.8664 46.2625 31.1012 46.735L31.8159 44.8671C30.6229 44.4106 29.4399 43.9122 28.2689 43.372L27.4312 45.1882ZM34.8667 48.0323C36.1395 48.4231 37.4216 48.7694 38.711 49.0709L39.1663 47.1234C37.9213 46.8323 36.6832 46.4979 35.4537 46.1204L34.8667 48.0323ZM42.6179 49.8439C43.9305 50.057 45.2486 50.2245 46.5702 50.3461L46.7535 48.3545C45.4779 48.2371 44.2055 48.0755 42.9384 47.8698L42.6179 49.8439ZM50.5473 50.5736C51.8745 50.6035 53.203 50.5873 54.5312 50.525L54.4375 48.5272C53.1556 48.5873 51.8732 48.6029 50.5923 48.5741L50.5473 50.5736ZM58.5011 50.2011C59.8167 50.0478 61.1299 49.849 62.4388 49.6044L62.0714 47.6385C60.8076 47.8746 59.5398 48.0666 58.2697 48.2145L58.5011 50.2011ZM66.327 48.7397C67.6073 48.4088 68.8816 48.0333 70.1479 47.6132L69.5181 45.715C68.2944 46.1209 67.0633 46.4837 65.8266 46.8033L66.327 48.7397ZM73.8803 46.2354C75.1016 45.7381 76.3135 45.1979 77.5143 44.6148L76.6407 42.8157C75.4789 43.3798 74.3068 43.9022 73.126 44.3832L73.8803 46.2354ZM81.0364 42.7625C82.1819 42.1126 83.3152 41.422 84.4349 40.6907L83.3412 39.0163C82.2563 39.7249 81.1586 40.3937 80.0495 41.0229L81.0364 42.7625ZM87.6939 38.417C88.7468 37.6339 89.7856 36.8129 90.8087 35.9537L89.5225 34.4221C88.5294 35.2561 87.5215 36.0527 86.5004 36.8122L87.6939 38.417ZM93.7746 33.3139C94.2558 32.8605 94.7329 32.3981 95.2059 31.9266L93.7941 30.5101C93.3343 30.9684 92.8705 31.4178 92.4029 31.8584L93.7746 33.3139ZM95.2059 31.9266C95.6803 31.4538 96.1547 30.9886 96.6291 30.5309L95.2404 29.0916C94.7582 29.5569 94.276 30.0297 93.7941 30.5101L95.2059 31.9266ZM99.5203 27.8326C100.515 26.9357 101.508 26.071 102.501 25.2376L101.215 23.7057C100.204 24.5546 99.1924 25.4349 98.1807 26.3475L99.5203 27.8326ZM105.573 22.7559C106.629 21.9356 107.683 21.15 108.735 20.3982L107.573 18.7709C106.498 19.5385 105.423 20.34 104.346 21.1765L105.573 22.7559ZM111.99 18.1746C113.112 17.4427 114.231 16.7484 115.346 16.0904L114.33 14.3678C113.188 15.0412 112.044 15.7514 110.897 16.4995L111.99 18.1746ZM118.789 14.1669C119.969 13.5443 121.144 12.9616 122.313 12.4173L121.469 10.6041C120.27 11.1625 119.065 11.76 117.855 12.3981L118.789 14.1669ZM125.922 10.8507C127.16 10.3518 128.391 9.89532 129.614 9.4794L128.969 7.58601C127.712 8.01382 126.447 8.48315 125.175 8.99567L125.922 10.8507ZM133.363 8.32152C134.648 7.96513 135.922 7.65287 137.184 7.38265L136.766 5.42695C135.464 5.70553 134.151 6.0273 132.829 6.39432L133.363 8.32152ZM141.042 6.67994C142.358 6.48217 143.659 6.32948 144.945 6.21937L144.774 4.22666C143.446 4.3404 142.102 4.49806 140.745 4.70216L141.042 6.67994ZM148.86 6.01199C150.187 5.98528 151.494 6.00349 152.781 6.06366L152.874 4.06585C151.543 4.0036 150.191 3.98478 148.82 4.0124L148.86 6.01199ZM156.691 6.38007C158.008 6.53228 159.3 6.72825 160.565 6.96446L160.932 4.99845C159.622 4.75376 158.284 4.55084 156.92 4.39329L156.691 6.38007ZM164.386 7.81905C165.67 8.15453 166.92 8.5314 168.135 8.94542L168.78 7.05235C167.52 6.62272 166.223 6.23185 164.892 5.88406L164.386 7.81905ZM171.788 10.345C172.394 10.6036 172.988 10.8714 173.572 11.1477L174.428 9.34026C173.821 9.05281 173.203 8.77442 172.574 8.50575L171.788 10.345Z' fill='%2341474A'/%3E%3Ccircle cx='3' cy='23.244' r='3' fill='%23CE0058'/%3E%3C/svg%3E%0A");
+    }
+
+    @media screen and (max-width: 800px) {
+      margin: 0 auto;
+      display: block;
+
+
+      &::after {
+        display: none;
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      text-align: center;
+    }
+  }
+
+  & &__btn {
+    @media screen and (max-width: 800px) {
+      margin: 2rem auto 0;
+    }
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+.down-btn {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 9.5rem;
+  height: 2.5rem;
+  border: none;
+  background-color: transparent;
+  outline: transparent;
+  background-image: url(../img/icons/arrow-down-tringle.svg);
+  @include background;
+  font-size: 0;
+}
+
+.hero .hero-bubbles {
+  margin-left: 2rem;
+  max-width: unset;
+  width: 45%;
+
+  @media screen and (max-width: 1471px) {
+    margin-bottom: 2rem;
+    margin-left: 0;
+    width: 90%;
+  }
+}
+
+.hero-row {
+  width: 100%;
+}
+
+.round {
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.06);
+
+  img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+
+  &--xs {
+    width: 1.75rem;
+    height: 1.75rem;
+
+    @media screen and (max-width: 800px) {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &--s {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    @media screen and (max-width: 800px) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+
+
+  &--xm {
+    height: 5.25rem;
+    width: 5.25rem;
+
+    @media screen and (max-width: 800px) {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &--sm {
+    width: 7rem;
+    height: 7rem;
+
+    @media screen and (max-width: 800px) {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &--m {
+    width: 7.5rem;
+    height: 7.5rem;
+
+    @media screen and (max-width: 800px) {
+      width: 4.25rem;
+      height: 4.25rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+
+  &--ml {
+    width: 8.125rem;
+    height: 8.125rem;
+
+    @media screen and (max-width: 800px) {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+  }
+
+  &--l {
+    width: 10rem;
+    height: 10rem;
+
+    @media screen and (max-width: 800px) {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    @media screen and (max-width:600px) {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+  }
+
+  &--xl {
+    width: 11.75rem;
+    height: 11.75rem;
+
+    @media screen and (max-width: 800px) {
+      width: 7.5rem;
+      height: 7.5rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &--mavala {
+    background-color: #ec174f;
+  }
+
+  &--kiss {
+    background-color: #a4000e;
+  }
+
+  &--v10 {
+    background-color: #e46286;
+  }
+
+  &--rk {
+    background-color: #E5188F;
+  }
+
+  &__logo {
+    object-fit: contain;
+    width: 80%;
+
+    &--heart {
+      width: 50%;
+    }
+  }
+}
+
+.hero__image-box {
+  position: relative;
+
+  img {
+    object-fit: contain;
+    max-width: 100%;
+  }
+}
+
+.hero__image-star {
+  background-image: url(../img/hero-plumb.svg);
+  @include background;
+  position: absolute;
+  height: 10.25rem;
+  width: 10.25rem;
+  bottom: 4.25rem;
+  right: 0;
+  transform: translateX(50%);
+  text-align: center;
+  padding: 1.75rem 2.5rem;
+
+  @media screen and (max-width:900px) {
+    transform: none;
+    right: 2rem;
+  }
+
+  .star-text {
+    color: var(--color__white);
+    display: block;
+
+    @media screen and (max-width:600px) {
+      font-size: .8rem;
+      line-height: 1.33;
+    }
+  }
+}
+
+.hero__tringle {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background-color: transparent;
+  background-image: url(../img/icons/arrow-down-tringle.svg);
+  width: 10.5rem;
+  height: 3rem;
+  @include background;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*HERO END*/

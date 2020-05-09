@@ -1,0 +1,274 @@
+/*HEADER START*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 11;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .06);
+}
+
+.logo {
+  margin-right: 3.5rem;
+  max-width: 13.5rem;
+  width: 20%;
+
+  @media screen and (max-width: 1023px) {
+    order: 1;
+    margin-left: auto;
+    width: auto;
+    max-width: 50%;
+    max-height: 5rem;
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin-right: auto;
+  }
+
+  &__link svg {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+.burger {
+  display: none;
+  background-color: transparent;
+  border: none;
+
+  @media screen and (max-width: 1023px) {
+    display: block;
+  }
+
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: var(--color__fill-1);
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+
+  .ham8 .top {
+    stroke-dasharray: 40 160;
+  }
+
+  .ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+  }
+
+  .ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+  }
+
+  .ham8.active .top {
+    stroke-dashoffset: -4rem;
+  }
+
+  .ham8.active .middle {
+    transform: rotate(90deg);
+  }
+
+  .ham8.active .bottom {
+    stroke-dashoffset: -4rem;
+  }
+}
+
+.menu {
+  @media screen and (max-width: 1023px) {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    order: 3;
+    position: relative;
+  }
+}
+
+.menu-list {
+  list-style: none;
+  background-color: var(--color__white);
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+    padding: 1rem;
+    margin-right: auto;
+    width: 15rem;
+  }
+
+  &__item {
+    display: inline-block;
+    padding-left: 0;
+    position: relative;
+
+    @media screen and (max-width: 1023px) {
+      display: block;
+      padding: 1rem 0;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+
+    &--current::before {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 0.25rem;
+      background-color: var(--color__fill-1);
+      position: absolute;
+      border-radius: 1rem;
+      bottom: -2.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+
+      @media screen and (max-width: 1023px) {
+        bottom: 0;
+      }
+
+      & .btn {
+        color: var(--color__text-2);
+      }
+    }
+  }
+
+  &__link {
+    @media screen and (max-width: 1023px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__link.btn {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.125rem;
+    line-height: 1.56;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      color: var(--color__white);
+    }
+  }
+}
+
+.header-contact {
+  margin-left: auto;
+  display: flex;
+
+  @media screen and (max-width: 1023px) {
+    order: 2;
+  }
+}
+
+.header-btn {
+  margin-left: 1.5rem;
+  max-width: 20rem;
+  padding: 0 2.5rem;
+
+  @media screen and (max-width: 1023px) {
+    margin-left: auto;
+    display: none;
+  }
+
+  &__arrow {
+    margin: 0 0.75rem;
+    width: 0.5rem;
+    height: 1.5rem;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    display: inline-block;
+    max-width: 6.75rem;
+  }
+}
+
+.header-phone {
+  text-align: right;
+
+  @media screen and (max-width: 1023px) {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 730px) {
+    margin-right: 1.875rem;
+  }
+
+
+  &__time {
+    opacity: 0.5;
+    font-size: 0.75rem;
+
+    @media screen and (max-width: 540px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: var(--color__dark);
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    height: 1.75rem;
+
+    @media screen and (max-width: 540px) {
+      display: none;
+    }
+
+    &.--icon-link {
+      margin-right: 0.75rem;
+      height: 100%;
+
+      @media screen and (max-width: 540px) {
+        display: block;
+      }
+    }
+  }
+
+  &__callback.btn {
+    margin-left: auto;
+    padding: 0.1rem;
+    height: auto;
+
+    @media screen and (max-width: 540px) {
+      display: none;
+    }
+  }
+}
+
+.phone-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/*HEADER END*/

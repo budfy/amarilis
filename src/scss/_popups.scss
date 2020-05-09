@@ -1,0 +1,214 @@
+/*POPUP STYLES START*/
+.popup .popup__content {
+  border-radius: 1rem;
+  max-width: 40rem;
+}
+
+.popup-label {
+  display: block;
+  position: relative;
+
+  &__placeholder {
+    position: absolute;
+    left: 2.5rem;
+    @include centering;
+    font-size: 1.25rem;
+    opacity: .4;
+    color: var(--color__dark);
+    user-select: none;
+    transition: all ease-in-out .26s;
+  }
+
+  .popup-input {
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--color__fill-4);
+    width: 100%;
+    border: 0.25rem solid transparent;
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 1.56;
+    color: var(--color__text-2);
+    transition: all ease-in-out .26s;
+
+    &:focus {
+      background: #FFFFFF;
+      opacity: 0.8;
+      color: var(--color__fill-2);
+      border: 0.25rem solid #818D92;
+
+      &+.popup-label__placeholder {
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.43;
+        top: 0.8rem;
+        left: 2.75rem;
+        color: var(--color__fill-2);
+        transform: none;
+      }
+    }
+  }
+
+  &.popup-label--inputed {
+    & .popup-input {
+      background: #FFFFFF;
+      opacity: 0.8;
+      color: var(--color__fill-2);
+      border: 0.25rem solid #818D92;
+    }
+
+    & .popup-label__placeholder {
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.43;
+      top: 0.8rem;
+      left: 2.75rem;
+      transform: none;
+      color: var(--color__fill-2);
+    }
+  }
+
+  & .checkbox__trigger {
+    background-color: var(--color__text-2);
+    box-shadow: none;
+  }
+
+  & input:checked+*>.checkbox__trigger {
+    background-color: var(--color__text-2);
+  }
+
+  & input:checked+*>.checkbox__label {
+    color: var(--color__text-2);
+  }
+
+  & input:checked+*>.checkbox__label {
+    color: var(--color__text-2);
+  }
+
+  .checkbox__label {
+    font-weight: normal;
+    font-size: 0.875rem;
+    color: var(--color__text-2);
+  }
+}
+
+.popup-btn {
+  width: 100%;
+  display: block;
+}
+
+.popup-slider .popup__content {
+  padding: 0;
+  border-radius: 1rem;
+  background-color: transparent;
+  max-width: 70rem;
+
+  .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--color__white);
+  }
+
+  .type-carusel__btn {
+    top: calc(50% + 1.25rem);
+  }
+}
+
+.popup-slide {
+  padding-top: 2.5rem;
+
+  &__content {
+    background-color: var(--color__white);
+    position: relative;
+    padding: 0 6rem 4.5rem;
+    border-radius: 1rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 1rem;
+      width: 100%;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      background-color: var(--color__fill-1);
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+  }
+}
+
+.popup-logo {
+  top: -2.5rem;
+  box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.06);
+  z-index: 1;
+  position: relative;
+}
+
+.popup-title {
+  position: relative;
+
+  .title__text-wrapper {
+    margin-left: 2rem;
+    flex-grow: 1;
+    margin-bottom: 5rem;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 0.0625rem;
+      width: 100%;
+      background-color: var(--color__border);
+      right: 0;
+      bottom: 1rem;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 1.25;
+    width: intrinsic;
+    width: -webkit-fit-content;
+    width: fit-content;
+    background-color: var(--color__white);
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.icon-box {
+  height: 5rem;
+  width: 5rem;
+}
+
+.popup-icons {
+  border-bottom: 0.0625rem solid var(--color__border);
+  margin-left: -3.125rem;
+
+  &__item {
+    margin-left: 3.125rem;
+  }
+}
+
+
+.icon-text {
+  display: block;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color__text-2);
+  max-width: 11.5rem;
+  margin: 0 auto;
+
+  &--value {
+    max-width: 7rem;
+  }
+}
+
+/*POPUP STYLES END*/

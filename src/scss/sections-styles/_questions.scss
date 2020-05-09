@@ -1,0 +1,45 @@
+/*QUESTIONS START*/
+.questions-item {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='13' viewBox='0 0 20 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L10 10L18 2' stroke='%23818D92' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+    width: 1.25rem;
+    height: 0.75rem;
+    @include background;
+    top: 2.875rem;
+    right: 3rem;
+    transform: rotate(180deg);
+    transition: all .5s;
+    opacity: 0.32;
+  }
+
+  &--closed::after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='13' viewBox='0 0 20 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L10 10L18 2' stroke='%23818D92' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+    transform: none;
+    opacity: 1;
+  }
+
+  .questions-inner {
+    display: none;
+
+    &__text,
+    .questions-list {
+      margin: 1.5rem 0;
+    }
+  }
+
+  .questions-name {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+
+/*QUESTIONS END*/

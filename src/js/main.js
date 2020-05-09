@@ -34,29 +34,33 @@ $(function () {
 
 	let slide_id;
 	$("a[href ^= '#popup-presentation']").on("click", function () {
-		slide_id = parseInt($(this).data("slide")) - 1;
-		console.log(slide_id);
-		review_carusel.update();
+		slide_id = $(this).data("slide");
+		$('#popup-presentation').attr('style', 'display:none');
+		popup_carusel.slideTo(slide_id);
 	});
 
-	var review_carusel = new Swiper(".js-swiper__popup .swiper-container", {
-		slidesPerView: 1,
-		slidesPerColumn: 1,
-		spaceBetween: 0,
-		loop: false,
-		mode: 'horizontal',
-		freeMode: false,
-		initialSlide: slide_id,
-		autoHeight: false,
-		slidesPerGroup: 1,
-		pagination: {
-			el: ".js-swiper__popup .swiper-pagination",
-			clickable: true,
-		},
-		navigation: {
-			nextEl: ".js-swiper__popup .swiper-button-next",
-			prevEl: ".js-swiper__popup .swiper-button-prev",
-		},
+	$(window).on("load", function () {
+		var popup_carusel = new Swiper(".js-swiper__popup .swiper-container", {
+			slidesPerView: 1,
+			slidesPerColumn: 1,
+			spaceBetween: 0,
+			loop: false,
+			mode: 'horizontal',
+			freeMode: false,
+			autoHeight: false,
+			slidesPerGroup: 1,
+			pagination: {
+				el: ".js-swiper__popup .swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".js-swiper__popup .swiper-button-next",
+				prevEl: ".js-swiper__popup .swiper-button-prev",
+			},
+		});
+		setTimeout(() => {
+			$('#popup-presentation').attr('style', 'display:none');
+		}, 100);
 	});
 
 	var review_carusel = new Swiper(".js-swiper__clients .swiper-container", {
@@ -164,8 +168,8 @@ $(function () {
 
 	$(".questions-item").click(function () {
 		$(this).toggleClass("questions-item--closed");
-		$(this).children(".questions-inner").slideToggle(500);
-		$(this).siblings().children(".questions-inner").slideUp(500);
+		$(this).children(".questions-inner").slideToggle(240);
+		$(this).siblings().children(".questions-inner").slideUp(240);
 		$(this).siblings().addClass("questions-item--closed");
 	});
 
@@ -198,23 +202,70 @@ $(function () {
 		}
 	});
 
-	$('.menu-list__link').each(function () {
-		var location = window.location.hash;
-		var link = this.hash;
-		if (location == link) {
-			$(this).parent().addClass('menu-list__item--current');
-			$(this).parent().siblings().addClass('menu-list__item--current');
-		}
-	});
+	// $('.menu-list__link').each(function () {
+	// 	var location = window.location.hash;
+	// 	var link = this.hash;
+	// 	if (location == link) {
+	// 		$(this).parent().addClass('menu-list__item--current');
+	// 		$(this).parent().siblings().addClass('menu-list__item--current');
+	// 	}
+	// });
 
 	$(".burger").on("click", function () {
 		$(".menu-list").slideToggle(500);
 		$(".menu").toggleClass("menu--active");
-		$('.ham').toggleClass('active');
+		$(".hamRotate").toggleClass("active");
 	});
+
+	$(".menu-list__link").on("click", function () {
+		$(".hamRotate").removeClass("active");
+		$(".menu-list").slideUp(500);
+		$(".menu").removeClass("menu--active");
+	})
 
 	$("a[href^='#popup-present']").on("click", function () {
 		let brand = $(this).parent().siblings(".brands-desc").children(".brands-desc__name").text();
 		$(".brand-name--js").text(brand);
 	});
+
+	var lastId, topMenu = $(".header"),
+		topMenuHeight = topMenu.outerHeight() + 15,
+		menuItems = topMenu.find(".menu-list__link"),
+		scrollItems = menuItems.map(function () {
+			var item = $($(this).attr("href"));
+			if (item.length) {
+				return item;
+			}
+		});
+
+	menuItems.click(function (e) {
+		var href = $(this).attr("href"),
+			offsetTop = href === "#" ? 0 : $(href).offset().top - 148 - topMenuHeight + 1;
+		$('html, body').stop().animate({
+			scrollTop: offsetTop
+		}, 300);
+		e.preventDefault();
+	});
+
+	$(window).scroll(function () {
+		var fromTop = $(this).scrollTop() + topMenuHeight + 148;
+		var cur = scrollItems.map(function () {
+			if ($(this).offset().top < fromTop)
+				return this;
+		});
+		cur = cur[cur.length - 1];
+		var id = cur && cur.length ? cur[0].id : "";
+
+		if (lastId !== id) {
+			lastId = id;
+			menuItems.parent().removeClass("menu-list__item--current").end().filter("[href='#" + id + "']").parent().addClass("menu-list__item--current");
+		}
+	});
+
+	var height = $(this).scrollTop();
+	$(window).scroll(function (e) {
+		var height = $(this).scrollTop();
+		$('.top ')[height >= 1 ? 'addClass' : 'removeClass']('fixed');
+	});
+
 });
