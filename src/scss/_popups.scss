@@ -2,6 +2,15 @@
 .popup .popup__content {
   border-radius: 1rem;
   max-width: 40rem;
+  padding: 3.5rem 6rem;
+
+  @media screen and (max-width:600px) {
+    padding: 4rem;
+  }
+
+  @media screen and (max-width:600px) {
+    padding: 2rem;
+  }
 }
 
 .popup-label {
@@ -125,6 +134,10 @@
     padding: 0 6rem 4.5rem;
     border-radius: 1rem;
 
+    @media screen and (max-width: 1023px) {
+      padding: 0 3rem 1.5rem;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -146,10 +159,26 @@
   box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.06);
   z-index: 1;
   position: relative;
+
+  @media screen and (max-width: 1023px) {
+    position: absolute;
+    top: unset;
+  }
+}
+
+.popup-slider {
+  .popup-title {
+    @media screen and (max-width: 1023px) {
+      padding-top: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 .popup-title {
   position: relative;
+
 
   .title__text-wrapper {
     margin-left: 2rem;
@@ -158,14 +187,24 @@
     overflow: hidden;
     position: relative;
 
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 0;
+      text-align: center;
+      margin-left: 0;
+    }
+
     &::before {
       content: "";
       position: absolute;
-      height: 0.0625rem;
+      height: 1px;
       width: 100%;
       background-color: var(--color__border);
       right: 0;
       bottom: 1rem;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
     }
   }
 
@@ -178,6 +217,12 @@
     background-color: var(--color__white);
     z-index: 1;
     position: relative;
+
+    @media screen and (max-width: 1023px) {
+      width: auto;
+      background-color: transparent;
+      padding-left: 1.5rem;
+    }
   }
 }
 
@@ -187,14 +232,36 @@
 }
 
 .popup-icons {
-  border-bottom: 0.0625rem solid var(--color__border);
+  border-bottom: 1px solid var(--color__border);
   margin-left: -3.125rem;
+
+  @media screen and (max-width: 1023px) {
+    margin: 0 auto;
+    justify-content: center;
+  }
 
   &__item {
     margin-left: 3.125rem;
+
+    @media screen and (max-width: 1023px) {
+      max-width: 6rem;
+      margin: 1rem;
+    }
   }
 }
 
+.order-title {
+  font-family: Montserrat Alternates;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.25;
+  color: var(--color__dark);
+
+  @media screen and (max-width: 700px) {
+    text-align: center;
+  }
+}
 
 .icon-text {
   display: block;
@@ -208,6 +275,159 @@
 
   &--value {
     max-width: 7rem;
+  }
+}
+
+.popup--trade {
+  .popup__content {
+    padding: 0;
+    max-width: 70%;
+  }
+}
+
+.order-box {
+  flex-wrap: nowrap;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+
+.order-box .order-wrapper,
+.order-box .order-form {
+  @media screen and (max-width: 700px) {
+    max-width: unset;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.order-wrapper {
+  background-color: #F4F4F4;
+  padding: 3rem 3.5rem 4.875rem;
+}
+
+.order-form {
+  padding: 3.25rem 6rem;
+
+  & .popup__title {
+    font-family: Montserrat Alternates;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--color__dark);
+
+  }
+}
+
+.order-item+.order-item {
+  margin-top: 1.375rem;
+}
+
+.order-counter {
+  padding-bottom: 1.375rem;
+  border-bottom: 1px solid rgba(65, 71, 74, 0.08);
+
+  &--wrapper {
+    display: none;
+  }
+}
+
+.counter-calc {
+
+  &__minus,
+  &__plus,
+  &__text {
+    cursor: pointer;
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__minus,
+  &__plus {
+    width: 2rem;
+    height: 2rem;
+    background-color: #818D92;
+    border-radius: 0.25rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    opacity: 0.2;
+    color: var(--color__white);
+    font-size: 2rem;
+    font-weight: 700;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    height: 2rem;
+    width: 3rem;
+    text-align: center;
+    font-family: Montserrat Alternates;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--color__dark);
+    border: none;
+  }
+}
+
+.order-price,
+.order-summ {
+  span {
+    display: block;
+  }
+
+  &__text {
+    font-weight: bold;
+    font-size: 0.8125rem;
+    line-height: 1.54;
+    color: #000000;
+    opacity: 0.32;
+  }
+
+  &__value {
+    font-family: Montserrat Alternates;
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 1.11;
+    color: var(--color__dark);
+  }
+}
+
+.order-bill {
+  @media screen and (max-width: 700px) {
+    text-align: right;
+  }
+
+  span {
+    display: block;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--color__text-3);
+  }
+
+  &__summ {
+    font-family: Montserrat Alternates;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--color__dark);
   }
 }
 

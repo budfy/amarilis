@@ -2,6 +2,14 @@
 .contact {
   height: 45rem;
   position: relative;
+
+  @media screen and (max-width: 650px) {
+    height: 60rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    height: 75rem;
+  }
 }
 
 .contact-title {
@@ -58,7 +66,7 @@
 
 .contact-row {
   &--top {
-    border-bottom: 0.0625rem solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
   }
 
   &--bottom {
@@ -82,6 +90,10 @@
 
 .basement {
   background: #656F73;
+
+  & a {
+    transition: all .26s;
+  }
 }
 
 .basement-wrapper {
@@ -100,7 +112,7 @@
 
 .basement-logo {
   height: 100%;
-  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
   @media screen and (max-width: 1023px) {
     margin: 0 auto;
@@ -110,6 +122,10 @@
 
 .subscribe-label {
   display: block;
+
+  @media screen and (max-width: 1023px) {
+    order: 3;
+  }
 }
 
 .basement-row .basement-subscribe {
@@ -139,16 +155,25 @@
     @media screen and (max-width: 1023px) {
       max-width: unset;
       margin-left: 0;
+      order: 1;
+      margin-bottom: 1rem;
     }
   }
 
   @media screen and (max-width: 1023px) {
     max-width: unset;
+    display: flex;
+    flex-direction: column;
+    order: 2;
   }
 }
 
 .subscribe-wrapper {
   position: relative;
+
+  @media screen and (max-width: 1023px) {
+    order: 1;
+  }
 }
 
 .subscribe-btn {
@@ -158,6 +183,14 @@
   background-color: transparent;
   border: none;
   height: 100%;
+
+  svg path {
+    transition: all 0.26s;
+  }
+
+  &:hover svg path {
+    stroke: var(--color__dark);
+  }
 }
 
 .basement-checkbox {
@@ -231,14 +264,41 @@
   line-height: 1.43;
 }
 
-.social-list__item {
-  max-width: 20%;
+.social-list {
+  display: flex;
+  justify-content: space-between;
 
-  svg {
-    width: 100%;
-    object-fit: contain;
+  &__item {
+    max-width: 20%;
+    transition: all 0.26s;
+    overflow: hidden;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 0.5rem;
+
+    a {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: all 0.26s;
+      transform-origin: center;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.3);
+      }
+    }
+
   }
 }
+
 
 .basement-copyright {
   font-size: 1rem;
@@ -254,6 +314,11 @@
 .basement-links__item {
   font-size: 1rem;
   line-height: 1.5;
+
+  &:hover,
+  & a:hover {
+    opacity: 1;
+  }
 }
 
 .basement-contact {
@@ -275,9 +340,19 @@
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.33;
+    transition: all .5s;
 
     & svg {
       display: inline-block;
+      transition: all .5s;
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      svg {
+        transform: rotate(25deg);
+      }
     }
   }
 
@@ -288,6 +363,11 @@
     font-size: 1.25rem;
     line-height: 1.5;
     opacity: 0.32;
+
+    &:hover,
+    &:hover span {
+      opacity: 1;
+    }
 
     & span {
       font-size: 0.75rem;
@@ -302,6 +382,11 @@
     opacity: 0.5;
     font-weight: 400;
 
+    &:hover,
+    &:hover span {
+      opacity: 1;
+    }
+
     &--small {
       font-size: 0.875rem;
       line-height: 1.25rem;
@@ -313,22 +398,27 @@
     line-height: 1.25rem;
     opacity: 0.4;
     font-weight: 400;
+
+    &:hover,
+    &:hover span {
+      opacity: 1;
+    }
   }
 }
 
 .basement-row .basement-icons {
+  &__item {
+    max-width: 20%;
+    margin: 0 2.5%;
+
+    & svg {
+      max-width: 100%;
+    }
+  }
+
   @media screen and (max-width: 1100px) {
     width: 70%;
     max-width: unset;
-
-    &__item {
-      max-width: 20%;
-      margin: 0 2.5%;
-
-      & svg {
-        max-width: 100%;
-      }
-    }
   }
 
   @media screen and (max-width: 1100px) {

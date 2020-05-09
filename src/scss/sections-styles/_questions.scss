@@ -3,6 +3,7 @@
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
   border-radius: 1rem;
   position: relative;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -26,6 +27,7 @@
 
   .questions-inner {
     display: none;
+    margin-top: 1.5rem;
 
     &__text,
     .questions-list {

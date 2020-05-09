@@ -96,7 +96,9 @@ gulp.task("style", function () {
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
 			"libs/swiper/swiper.min.css",
-			"libs/fancybox/jquery.fancybox.min.css"
+			"libs/fancybox/jquery.fancybox.min.css",
+			"node_modules/slick-carousel/slick/slick.css",
+			"node_modules/slick-carousel/slick/slick-theme.css"
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -131,7 +133,8 @@ gulp.task("script", function () {
 			"node_modules/jquery/dist/jquery.js",
 			"libs/swiper/swiper.min.js",
 			"libs/fancybox/jquery.fancybox.min.js",
-			"libs/inputmask/jquery.maskedinput.js"
+			"libs/inputmask/jquery.maskedinput.js",
+			"node_modules/slick-carousel/slick/slick.js"
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())

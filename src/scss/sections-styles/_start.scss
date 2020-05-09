@@ -83,7 +83,7 @@
     &::after {
       display: block;
       content: "";
-      height: 0.0625rem;
+      height: 1px;
       width: 100%;
       background: #e6e6e6;
       position: absolute;
@@ -121,7 +121,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 0.0625rem;
+    height: 1px;
     border-bottom: 0.1875rem dashed #e6e6e6;
   }
 }

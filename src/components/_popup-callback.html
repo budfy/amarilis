@@ -1,23 +1,15 @@
-<div class="popup" id="popup-request">
+<div class="popup" id="popup-callback">
   <div class="popup__wrap">
-    <div class="popup__content --base popup-request ">
+    <div class="popup__content --base popup-present ">
       <div class="popup__close js-popup__close"></div>
-      <h4 class="popup__title">Запрос предложения</h4>
-      <form action="" class="popup-form mt-32">
+      <h4 class="popup__title">Заказать звонок</h4>
+      <form class="popup-form mt-32">
         <label class="popup-label">
-          <input type="text" class="popup-input px-24 py-40" id="request-name" required>
+          <input type="text" class="popup-input px-24 py-40" id="present-name" required>
           <span class="popup-label__placeholder">Ваше имя:</span>
         </label>
         <label class="popup-label mt-16">
-          <input type="email" class="popup-input px-24 py-40" id="request-email" required>
-          <span class="popup-label__placeholder">E-mail:</span>
-        </label>
-        <label class="popup-label mt-16">
-          <input type="text" class="popup-input px-24 py-40" id="request-org" required>
-          <span class="popup-label__placeholder">Организация</span>
-        </label>
-        <label class="popup-label mt-16">
-          <input type="tel" class="popup-input px-24 py-40" id="request-tel" required>
+          <input type="tel" class="popup-input px-24 py-40" id="present-tel" required>
           <span class="popup-label__placeholder">Телефон:</span>
         </label>
         <button class="popup-btn btn --fill-1 --xl mt-16" type="submit">Отправить</button>

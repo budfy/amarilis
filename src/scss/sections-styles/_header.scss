@@ -10,9 +10,11 @@
 }
 
 .logo {
-  margin-right: 3.5rem;
-  max-width: 13.5rem;
+  margin-right: 3rem;
+  max-width: 8.5rem;
   width: 20%;
+
+  &--small {}
 
   @media screen and (max-width: 1023px) {
     order: 1;
@@ -259,6 +261,8 @@
     margin-left: auto;
     padding: 0.1rem;
     height: auto;
+    width: -webkit-fit-content;
+    width: fit-content;
 
     @media screen and (max-width: 540px) {
       display: none;
@@ -269,6 +273,20 @@
 .phone-wrapper {
   display: flex;
   align-items: center;
+}
+
+.lang-checker {
+  display: block;
+  height: 2.2rem;
+  padding: 0.5rem 0.25rem;
+  width: 2.2rem;
+  margin: 0 0.5rem;
+  border: 1px solid var(--color__fill-1);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: Montserrat Alternates, sans-serif;
+  color: var(--color__fill-1);
 }
 
 /*HEADER END*/
