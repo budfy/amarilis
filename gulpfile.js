@@ -192,7 +192,7 @@ gulp.task("js", function () {
 gulp.task("html", function () {
 	//собираем html из кусочков
 	return gulp
-		.src(["src/**/*.html", "!src/components/**/*.html", "!src/core/**/*.*"])
+		.src(["src/**/*.html", "!src/components/**/*.html", "!src/components_ua/**/*.html", "!src/components_ua_rus/**/*.html", "!src/core/**/*.*"])
 		.pipe(sourcemaps.init())
 		.pipe(
 			include({

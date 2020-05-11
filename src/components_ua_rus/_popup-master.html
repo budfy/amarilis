@@ -1,0 +1,32 @@
+<div class="popup" id="popup-master">
+  <div class="popup__wrap">
+    <div class="popup__content --base popup-master ">
+      <div class="popup__close js-popup__close"></div>
+      <h4 class="popup__title">Запрос предложения</h4>
+      <form action="" class="popup-form mt-32">
+        <label class="popup-label">
+          <input type="text" class="popup-input px-24 py-40" id="master-name" required>
+          <span class="popup-label__placeholder">Ваше имя:</span>
+        </label>
+        <label class="popup-label mt-16">
+          <input type="email" class="popup-input px-24 py-40" id="master-email" required>
+          <span class="popup-label__placeholder">E-mail:</span>
+        </label>
+        <label class="popup-label mt-16">
+          <input type="tel" class="popup-input px-24 py-40" id="master-tel" required>
+          <span class="popup-label__placeholder">Телефон:</span>
+        </label>
+        <button class="popup-btn btn --fill-1 --xl mt-16" type="submit">Отправить</button>
+        <label class="popup-label checkbox basement-checkbox subscribe-label pt-16">
+          <input type="checkbox" checked="checked" required>
+          <div class="flex --align-center">
+            <div class="checkbox__trigger"></div>
+            <div class="checkbox__label --p ml-16">Я даю согласие на <strong>обработку персональных данных</strong>
+            </div>
+          </div>
+        </label>
+      </form>
+    </div>
+    <div class="popup__shade js-popup__close"></div>
+  </div>
+</div>
