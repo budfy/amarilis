@@ -313,4 +313,58 @@ $(function () {
 		}
 	});
 
+	// forms sender
+	let $brandId;
+	$(".brands-button").on("click", function () {
+		$brandId = $(this).data('brand');
+		console.log($brandId);
+	});
+
+	$(".popup-form").not('#popup-present .popup-form').submit(function () {
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: th.serialize(),
+		}).done(function () {
+			setTimeout(function () {
+				th.trigger("reset");
+				$.fancybox.close();
+			}, 500);
+		});
+		return false;
+	});
+
+	$("#popup-present .popup-form").submit(function () {
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: th.serialize(),
+		}).done(function () {
+			setTimeout(function () {
+				th.trigger("reset");
+				$.fancybox.close();
+			}, 500);
+			console.log($brandId);
+			$.ajax({
+				url: 'presentations/' + $brandId + '.pdf',
+				dataType: 'binary',
+				xhrFields: {
+					'responseType': 'blob'
+				},
+				success: function (data, status, xhr) {
+					var blob = new Blob([data], {
+						type: xhr.getResponseHeader('Content-Type')
+					});
+					var link = document.createElement('a');
+					link.href = window.URL.createObjectURL(blob);
+					link.download = 'presentations/' + $brandId + '.pdf';
+					link.click();
+				}
+			});
+		});
+		return false;
+	});
+
 });

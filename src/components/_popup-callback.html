@@ -4,17 +4,20 @@
       <div class="popup__close js-popup__close"></div>
       <h4 class="popup__title">Заказать звонок</h4>
       <form class="popup-form mt-32">
+        <input type="hidden" name="project_name" value="Перезвонить" />
+        <input type="hidden" name="admin_email" value="d.borisov@amarylis.ru" />
+        <input type="hidden" name="form_subject" value="Заявка с сайта Amarilis" />
         <label class="popup-label">
-          <input type="text" class="popup-input px-24 py-40" id="present-name" required>
+          <input type="text" class="popup-input px-24 py-40" id="present-name" name="Имя" required>
           <span class="popup-label__placeholder">Ваше имя:</span>
         </label>
         <label class="popup-label mt-16">
-          <input type="tel" class="popup-input px-24 py-40" id="present-tel" required>
+          <input type="tel" class="popup-input px-24 py-40" id="present-tel" name="Телефон" required>
           <span class="popup-label__placeholder">Телефон:</span>
         </label>
         <button class="popup-btn btn --fill-1 --xl mt-16" type="submit">Отправить</button>
         <label class="popup-label checkbox basement-checkbox subscribe-label pt-16">
-          <input type="checkbox" checked="checked" required>
+          <input type="checkbox" checked="checked" required name="Перс.данные">
           <div class="flex --align-center">
             <div class="checkbox__trigger"></div>
             <div class="checkbox__label --p ml-16">Я даю согласие на <strong>обработку персональных данных</strong>
