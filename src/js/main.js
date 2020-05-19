@@ -293,11 +293,12 @@ $(function () {
 	let price,
 		count,
 		summ,
-		arrSumm = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		arrSumm = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		totalSumm = 0,
 		localSumm,
 		arrSummStorage;
 
-	$('.counter-calc__minus').click(function () {
+	$('.counter-calc__minus').on("click", function () {
 		let $input = $(this).parent().find('.counter-calc__text');
 		let count = parseInt($input.val()) - 20;
 		count = count < 0 ? 0 : count;
@@ -308,7 +309,8 @@ $(function () {
 		$input.change();
 	});
 
-	$('.counter-calc__plus').click(function () {
+	$('.counter-calc__plus').on("click", function () {
+
 		let $input = $(this).parent().find('.counter-calc__text');
 		count = parseInt($input.val()) + 20;
 		if (count % 20 != 0) {
@@ -318,7 +320,7 @@ $(function () {
 		$input.change();
 	});
 
-	$(".order-checkbox .order-input").on("input, change", function () {
+	$(".order-checkbox .order-input").on("input", function () {
 		price = parseInt($(this).parent().siblings(".order-counter--wrapper").find(".order-price__value").text()),
 			count = parseInt($(this).parent().siblings(".order-counter--wrapper").find(".counter-calc__text").val());
 		if ($(this).prop('checked') === true) {
@@ -335,9 +337,9 @@ $(function () {
 		} else {
 			$(this).parent().siblings(".order-counter--wrapper").slideUp(240);
 			$(this).parent().siblings(".order-counter--wrapper").find(".counter-calc__text").attr("disabled", true).val(0);
-			$(this).parent().siblings(".order-counter--wrapper").find(".order-summ__value").val("0 ₽");
 			count = 0;
-			calc(price, count);
+			summ = 0;
+			arrSummStorage = $(this).parent().siblings(".order-counter--wrapper").find(".order-summ__value").data("id");
 			$(this).parent().siblings(".order-counter--wrapper").find(".order-summ__value").val(count);
 			arrayValues(summ, arrSummStorage);
 		}
@@ -361,24 +363,24 @@ $(function () {
 
 	function calc(price, count) {
 		summ = price * count;
-		// console.log("price = " + price);
-		// console.log("count = " + count);
-		// console.log("summ = " + summ);
+		console.log("price = " + price);
+		console.log("count = " + count);
+		console.log("summ = " + summ);
 		return summ;
 	};
 
 	function arrayValues(localSumm, arrSummStorage) {
 		arrSumm[arrSummStorage] = localSumm;
 		arraySum(arrSumm);
-		// console.log("id= " + arrSummStorage + "/ localSumm= " + localSumm + "/ array: " + arrSumm + "/ total= " + total_summ);
+		console.log("id= " + arrSummStorage + "/ localSumm= " + localSumm + "/ array: " + arrSumm + "/ totalSumm= " + totalSumm);
+		$(".order-bill__summ").val(totalSumm.toLocaleString() + " ₽")
 	};
 
 	function arraySum(array) {
-		total_summ = 0;
+		totalSumm = 0;
 		for (var i = 0; i < array.length; i++) {
-			total_summ += array[i];
+			totalSumm += array[i];
 		}
-		$(".order-bill__summ").val(total_summ.toLocaleString() + " ₽")
 	};
 
 	// forms sender
@@ -434,21 +436,14 @@ $(function () {
 		return false;
 	});
 
-	$(".mobile-tell").on("click", function () {
-		$(this).children().find(".mobile-tell__btn-wrap>svg").toggleClass("--disable");
-		$(this).children().find(".mobile-tell__messengers").toggle(260);
-		$(this).children().find(".mobile-tell__messenger").toggleClass("--animated");
-		$(this).children().find(".mobile-tell__close").toggleClass("--active");
+	$(".mobile-tell__btn-wrap").on("click", function () {
+		$(this).children("svg").toggleClass("--disable");
+		$(this).siblings(".mobile-tell__messengers").toggle(260);
+		$(this).siblings().children().find(".mobile-tell__messenger").toggleClass("--animated");
+		$(this).children(".mobile-tell__close").toggleClass("--active");
 	});
 
-	// $(".mobile-tell__messenger").on("click", function () {
-	// 	$(".mobile-tell__btn-wrap>svg").removeClass("--disable");
-	// 	$(".mobile-tell__messengers").hide(260);
-	// 	$(".mobile-tell__messenger").removeClass("--animated");
-	// 	$(".mobile-tell__close").removeClass("--active");
-	// });
-
-	$(".popup-slide__text-wrapper, .orderscroll").mCustomScrollbar({
+	$(".popup-slide__text-wrapper, .order-scroll").mCustomScrollbar({
 		axis: "y",
 		theme: "light"
 	});
