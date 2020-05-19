@@ -55,7 +55,7 @@ $(function () {
 			slidesPerView: 1,
 			slidesPerColumn: 1,
 			spaceBetween: 0,
-			loop: false,
+			loop: true,
 			mode: 'horizontal',
 			freeMode: false,
 			autoHeight: false,
@@ -214,10 +214,10 @@ $(function () {
 	$(".popup-input").on("input", function () {
 		if ($(this).val() != "") {
 			$(this).parent().addClass("popup-label--inputed");
-			console.log("OK")
+			//console.log("OK")
 		} else {
 			$(this).parent().removeClass("popup-label--inputed");
-			console.log("else");
+			//console.log("else");
 		}
 	});
 
@@ -289,38 +289,106 @@ $(function () {
 		$('.top ')[height >= 1 ? 'addClass' : 'removeClass']('fixed');
 	});
 
-	//calculator function
+	//calculator functions
+	let price,
+		count,
+		summ,
+		arrSumm = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		localSumm,
+		arrSummStorage;
 
 	$('.counter-calc__minus').click(function () {
-		let $input = $(this).siblings('.counter-calc__text');
-		let count = parseInt($input.val()) - 1;
-		count = count < 1 ? 1 : count;
+		let $input = $(this).parent().find('.counter-calc__text');
+		let count = parseInt($input.val()) - 20;
+		count = count < 0 ? 0 : count;
+		if (count % 20 != 0) {
+			count = 20 * Math.round(count / 20)
+		}
 		$input.val(count);
 		$input.change();
 	});
 
 	$('.counter-calc__plus').click(function () {
 		let $input = $(this).parent().find('.counter-calc__text');
-		$input.val(parseInt($input.val()) + 1);
+		count = parseInt($input.val()) + 20;
+		if (count % 20 != 0) {
+			count = 20 * Math.round(count / 20)
+		}
+		$input.val(count);
 		$input.change();
 	});
 
-	$(".order-checkbox .order-input").on("change", function () {
+	$(".order-checkbox .order-input").on("input, change", function () {
+		price = parseInt($(this).parent().siblings(".order-counter--wrapper").find(".order-price__value").text()),
+			count = parseInt($(this).parent().siblings(".order-counter--wrapper").find(".counter-calc__text").val());
 		if ($(this).prop('checked') === true) {
 			$(this).parent().siblings(".order-counter--wrapper").slideDown(240);
+			$(this).parent().siblings(".order-counter--wrapper").find(".counter-calc__text").removeAttr('disabled').val(20);
+			count = parseInt($(this).parent().siblings(".order-counter--wrapper").find(".counter-calc__text").val());
+			calc(price, count);
+			$(this).parent().siblings(".order-counter--wrapper").find(".order-summ__value").val(summ.toLocaleString() + "₽");
+			arrSummStorage = $(this).parent().siblings(".order-counter--wrapper").find(".order-summ__value").data("id");
+			arrayValues(summ, arrSummStorage);
+			// console.log("price = " + price);
+			// console.log("count = " + count);
+			// console.log("summ = " + summ);
 		} else {
 			$(this).parent().siblings(".order-counter--wrapper").slideUp(240);
+			$(this).parent().siblings(".order-counter--wrapper").find(".counter-calc__text").attr("disabled", true).val(0);
+			$(this).parent().siblings(".order-counter--wrapper").find(".order-summ__value").val("0 ₽");
+			count = 0;
+			calc(price, count);
+			$(this).parent().siblings(".order-counter--wrapper").find(".order-summ__value").val(count);
+			arrayValues(summ, arrSummStorage);
 		}
 	});
+
+	$(".counter-calc__text").on("input, change", function () {
+		count = parseInt($(this).val());
+		if (count < 0) {
+			count = 0;
+		}
+		if (count % 20 != 0) {
+			count = 20 * Math.round(count / 20);
+		}
+		$(this).val(count);
+		price = parseInt($(this).parent().siblings(".order-price").find(".order-price__value").text());
+		calc(price, count);
+		$(this).parent().siblings(".order-summ").find(".order-summ__value").val(summ.toLocaleString() + "₽");
+		$(this).parent().siblings(".order-summ").find(".order-summ__value").val(summ.toLocaleString() + "₽");
+		arrayValues(summ, arrSummStorage);
+	});
+
+	function calc(price, count) {
+		summ = price * count;
+		// console.log("price = " + price);
+		// console.log("count = " + count);
+		// console.log("summ = " + summ);
+		return summ;
+	};
+
+	function arrayValues(localSumm, arrSummStorage) {
+		arrSumm[arrSummStorage] = localSumm;
+		arraySum(arrSumm);
+		// console.log("id= " + arrSummStorage + "/ localSumm= " + localSumm + "/ array: " + arrSumm + "/ total= " + total_summ);
+	};
+
+	function arraySum(array) {
+		total_summ = 0;
+		for (var i = 0; i < array.length; i++) {
+			total_summ += array[i];
+		}
+		$(".order-bill__summ").val(total_summ.toLocaleString() + " ₽")
+	};
 
 	// forms sender
 	let $brandId;
 	$(".brands-button").on("click", function () {
 		$brandId = $(this).data('brand');
-		console.log($brandId);
+		//console.log($brandId);
 	});
 
-	$(".popup-form").not('#popup-present .popup-form').submit(function () {
+	$(".popup-form").not("#popup-present .popup-form").submit(function () {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
@@ -346,7 +414,6 @@ $(function () {
 				th.trigger("reset");
 				$.fancybox.close();
 			}, 500);
-			console.log($brandId);
 			$.ajax({
 				url: 'presentations/' + $brandId + '.pdf',
 				dataType: 'binary',
@@ -365,6 +432,25 @@ $(function () {
 			});
 		});
 		return false;
+	});
+
+	$(".mobile-tell").on("click", function () {
+		$(this).children().find(".mobile-tell__btn-wrap>svg").toggleClass("--disable");
+		$(this).children().find(".mobile-tell__messengers").toggle(260);
+		$(this).children().find(".mobile-tell__messenger").toggleClass("--animated");
+		$(this).children().find(".mobile-tell__close").toggleClass("--active");
+	});
+
+	// $(".mobile-tell__messenger").on("click", function () {
+	// 	$(".mobile-tell__btn-wrap>svg").removeClass("--disable");
+	// 	$(".mobile-tell__messengers").hide(260);
+	// 	$(".mobile-tell__messenger").removeClass("--animated");
+	// 	$(".mobile-tell__close").removeClass("--active");
+	// });
+
+	$(".popup-slide__text-wrapper, .orderscroll").mCustomScrollbar({
+		axis: "y",
+		theme: "light"
 	});
 
 });

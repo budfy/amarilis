@@ -344,22 +344,23 @@ h2.hero-subtitle {
   position: absolute;
   height: 10.25rem;
   width: 10.25rem;
-  bottom: 4.25rem;
-  right: 0;
-  transform: translateX(50%);
+  top: 4.25rem;
+  left: 6rem;
+  transform: translateX(-50%);
   text-align: center;
   padding: 1.75rem 2.5rem;
 
   @media screen and (max-width:900px) {
     transform: none;
-    right: 2rem;
+    left: 0;
   }
 
   .star-text {
     color: var(--color__white);
     display: block;
+    font-size: 0.8rem;
 
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:700px) {
       font-size: .8rem;
       line-height: 1.33;
     }

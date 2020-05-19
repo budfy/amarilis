@@ -27,7 +27,6 @@
   line-height: 2rem;
   color: #ffffff;
   z-index: 1;
-  width: intrinsic;
   width: -webkit-fit-content;
   width: fit-content;
   top: 2rem;
@@ -242,7 +241,7 @@
   }
 
   &.basement-item--social {
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       width: 100%;
       max-width: unset;
       margin-bottom: 1rem;
@@ -265,11 +264,14 @@
 }
 
 .social-list {
-  display: flex;
-  justify-content: space-between;
+  margin-right: .5rem;
+
+  li+li {
+    margin-left: .5rem;
+  }
 
   &__item {
-    max-width: 20%;
+    max-width: 17%;
     transition: all 0.26s;
     overflow: hidden;
     height: 4rem;
@@ -439,5 +441,182 @@
     margin-top: 1rem;
   }
 }
+
+@keyframes bubble {
+  from {
+    width: 3.5rem;
+    height: 3.5rem;
+    opacity: 1;
+  }
+
+  to {
+    width: 7rem;
+    height: 7rem;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+.mobile-tell {
+  height: 1.75rem;
+  width: 1.75rem;
+  background-color: var(--color__fill-1);
+  border-radius: 100%;
+  box-shadow: 0 .5rem 2rem #ce005840;
+  margin-right: 1.5rem;
+  position: relative;
+
+  &--footer {
+    width: 3.5rem;
+    height: 3.5rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  &__btn-wrap:hover,
+  &__messenger:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%rem;
+      height: 100%rem;
+      border-radius: 50%;
+      border: 1px solid var(--color__fill-1);
+      background-color: transparent;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-name: bubble;
+      animation-duration: 1.5s;
+    }
+  }
+
+  & svg {
+    display: block;
+    transition: all ease .24s;
+    height: 90%;
+    width: 90%;
+  }
+
+  &__btn-wrap {
+    position: relative;
+
+    &>svg,
+    &>.mobile-tell__close {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &>svg {
+      opacity: 1;
+
+      &.--disable {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__close {
+    position: relative;
+    opacity: 0;
+
+    &.--active {
+      opacity: 1;
+
+      & .mobile-tell__close-line {
+        transform: translate(-50%, -50%) rotate(45deg);
+
+        &:first-child {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__close-line {
+    height: 0.25rem;
+    width: 2rem;
+    position: absolute;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .26s;
+  }
+
+  &__messengers {
+    position: absolute;
+    top: 150%;
+  }
+
+  &--footer &__messengers {
+    bottom: 150%;
+    display: none;
+  }
+
+
+  &__messenger {
+    position: relative;
+    background-color: var(--color__white);
+    border-radius: 50%;
+    transition: all ease .24s;
+    transform-origin: bottom center;
+    transform: translateY(2rem);
+    box-shadow: 0 .25rem 2rem #ce005840;
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0;
+
+    &>svg path {
+      fill: var(--color__fill-1)
+    }
+
+
+    &.--animated {
+      animation-fill-mode: both;
+      animation-duration: .24s;
+      animation-name: fadeInUp;
+
+      &:nth-child(1) {
+        animation-delay: .2s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: .15s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: .1s;
+      }
+
+      &:nth-child(4) {
+        animation-delay: .05s;
+      }
+    }
+  }
+
+  &-footer &__messenger {
+    margin-bottom: .5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    box-shadow: 0 .5rem 4rem #ce005840;
+  }
+}
+
+
 
 /*FOOTER END*/

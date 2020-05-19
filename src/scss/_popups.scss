@@ -106,22 +106,28 @@
   display: block;
 }
 
-.popup-slider .popup__content {
-  padding: 0;
-  border-radius: 1rem;
-  background-color: transparent;
-  max-width: 70rem;
-
-  .swiper-pagination-bullet {
-    background: rgba(255, 255, 255, 0.22);
+.popup-slider {
+  .popup__wrap {
+    padding: 4rem 0;
   }
 
-  .swiper-pagination-bullet-active {
-    background: var(--color__white);
-  }
+  .popup__content {
+    padding: 0;
+    border-radius: 1rem;
+    background-color: transparent;
+    max-width: 70rem;
 
-  .type-carusel__btn {
-    top: calc(50% + 1.25rem);
+    .swiper-pagination-bullet {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--color__white);
+    }
+
+    .type-carusel__btn {
+      top: calc(50% + 1.25rem);
+    }
   }
 }
 
@@ -131,7 +137,7 @@
   &__content {
     background-color: var(--color__white);
     position: relative;
-    padding: 0 6rem 4.5rem;
+    padding: 2rem 6rem 4.5rem;
     border-radius: 1rem;
 
     @media screen and (max-width: 1023px) {
@@ -152,18 +158,22 @@
       border-top-right-radius: 1rem;
     }
   }
+
+  &__text-wrapper {
+    max-height: 12.5rem;
+  }
 }
 
 .popup-logo {
-  top: -2.5rem;
+  top: -4.5rem;
   box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.06);
   z-index: 1;
   position: relative;
 
-  @media screen and (max-width: 1023px) {
-    position: absolute;
-    top: unset;
-  }
+  // @media screen and (max-width: 1023px) {
+  //   position: absolute;
+  //   top: unset;
+  // }
 }
 
 .popup-slider {
@@ -242,6 +252,7 @@
 
   &__item {
     margin-left: 3.125rem;
+    min-height: 10rem;
 
     @media screen and (max-width: 1023px) {
       max-width: 6rem;
@@ -267,7 +278,7 @@
   display: block;
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.1;
   text-align: center;
   color: var(--color__text-2);
   max-width: 11.5rem;
@@ -275,6 +286,7 @@
 
   &--value {
     max-width: 7rem;
+    word-wrap: normal;
   }
 }
 
@@ -311,6 +323,10 @@
 .order-wrapper {
   background-color: #F4F4F4;
   padding: 3rem 3.5rem 4.875rem;
+}
+
+.order-scroll {
+  max-height: 40rem;
 }
 
 .order-form {
@@ -372,7 +388,7 @@
 
   &__text {
     height: 2rem;
-    width: 3rem;
+    width: 5rem;
     text-align: center;
     font-family: Montserrat Alternates;
     font-weight: bold;
@@ -403,6 +419,11 @@
     font-size: 1.125rem;
     line-height: 1.11;
     color: var(--color__dark);
+    width: -webkit-fit-content;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    max-width: 7rem;
   }
 }
 
@@ -428,6 +449,9 @@
     font-size: 2.5rem;
     line-height: 1.2;
     color: var(--color__dark);
+    width: auto;
+    border: none;
+    background-color: transparent;
   }
 }
 

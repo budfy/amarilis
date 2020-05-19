@@ -98,7 +98,8 @@ gulp.task("style", function () {
 			"libs/swiper/swiper.min.css",
 			"libs/fancybox/jquery.fancybox.min.css",
 			"node_modules/slick-carousel/slick/slick.css",
-			"node_modules/slick-carousel/slick/slick-theme.css"
+			"node_modules/slick-carousel/slick/slick-theme.css",
+			"node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -134,7 +135,8 @@ gulp.task("script", function () {
 			"libs/swiper/swiper.min.js",
 			"libs/fancybox/jquery.fancybox.min.js",
 			"libs/inputmask/jquery.maskedinput.js",
-			"node_modules/slick-carousel/slick/slick.js"
+			"node_modules/slick-carousel/slick/slick.js",
+			"node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
@@ -364,7 +366,7 @@ gulp.task("browser-sync", function () {
 		server: {
 			baseDir: "build/", //какую папку показывать в браузере
 		},
-		browser: ["firefox"], //в каком браузере
+		//browser: ["firefox"], //в каком браузере
 		//tunnel: " ", //тут можно прописать название проекта и дать доступ к нему через интернет. Работает нестабильно, запускается через раз. Не рекомендуется включать без необходимости.
 		//tunnel:true, //работает, как и предыдущяя опция, но присваивает рандомное имя. Тоже запускается через раз и поэтому не рекомендуется для включения
 		host: "192.168.0.104", //IP сервера в локальной сети. Отключите, если у вас DHCP, пропишите под себя, если фиксированный IP в локалке.

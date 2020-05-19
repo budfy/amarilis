@@ -9,6 +9,10 @@
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, .06);
 }
 
+.--header-container {
+  overflow: visible;
+}
+
 .logo {
   margin-right: 3rem;
   max-width: 8.5rem;
@@ -250,9 +254,10 @@
     &.--icon-link {
       margin-right: 0.75rem;
       height: 100%;
+      display: none;
 
       @media screen and (max-width: 540px) {
-        display: block;
+        display: none;
       }
     }
   }
