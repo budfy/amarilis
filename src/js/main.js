@@ -443,9 +443,17 @@ $(function () {
 		$(this).children(".mobile-tell__close").toggleClass("--active");
 	});
 
-	$(".popup-slide__text-wrapper, .order-scroll").mCustomScrollbar({
+	$(".popup-slide__text-wrapper, .order-scroll, .popup-text").mCustomScrollbar({
 		axis: "y",
 		theme: "light"
+	});
+
+
+	$(".politics-link").on("click", function () {
+		let popupId = "#" + $(this).parents(".popup").prop("id");
+		console.log(popupId);
+		$("#popup-politics").find(".back-link").prop("href", popupId);
+		$("#popup-politics").find(".back-link").attr("data-popup", popupId);
 	});
 
 });

@@ -326,7 +326,7 @@
 }
 
 .order-scroll {
-  max-height: 40rem;
+  max-height: 50vh;
 }
 
 .order-form {
@@ -452,6 +452,31 @@
     width: auto;
     border: none;
     background-color: transparent;
+  }
+}
+
+.popup-politics .popup__content {
+  max-width: 80%;
+
+  .popup-title {
+    text-transform: uppercase;
+  }
+}
+
+.popup-text {
+  max-height: 70vh;
+
+  & p,
+  li {
+    margin-bottom: .5rem;
+  }
+}
+
+.politics-link {
+  color: var(--color__fill-1);
+
+  &:hover {
+    color: var(--color__fill-2);
   }
 }
 
