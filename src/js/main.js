@@ -399,7 +399,8 @@ $(function () {
 		}).done(function () {
 			setTimeout(function () {
 				th.trigger("reset");
-				$.fancybox.close();
+				$(".order-counter--wrapper").slideUp(240);
+				$(".popup").fancybox.close();
 			}, 500);
 		});
 		return false;
@@ -448,12 +449,18 @@ $(function () {
 		theme: "light"
 	});
 
+	let popupId;
+	$(".popup .politics-link").on("click", function () {
+		popupId = "#" + $(this).parents(".popup").prop("id");
+		$("#popup-politics").find(".back-link").attr({
+			"data-popup": popupId,
+			"href": popupId,
+		});
+		console.log(popupId)
+	});
 
-	$(".politics-link").on("click", function () {
-		let popupId = "#" + $(this).parents(".popup").prop("id");
-		console.log(popupId);
-		$("#popup-politics").find(".back-link").prop("href", popupId);
-		$("#popup-politics").find(".back-link").attr("data-popup", popupId);
+	$(".back-link").on("click", function () {
+		$.fancybox.close($("#popup-politics"));
 	});
 
 });

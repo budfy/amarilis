@@ -6,7 +6,7 @@ function popup__open(id) {
 	$('.popup').each(function () {
 		var this__id = $(this).attr('id');
 		if (this__id == id) {
-			$('.popup').fadeOut(popup__speed);
+			//$('.popup').fadeOut(popup__speed);
 			$('#' + this__id).fadeIn(popup__speed);
 			$('body').addClass('js-no-scroll');
 		};
@@ -20,11 +20,16 @@ function popup__ready() {
 $(document).ready(function () {
 	popup__ready();
 	$('body').on('click', '*[data-popup]', function () {
+		var this__close_all_popup = $(this).data('popupclose');
+		if (this__close_all_popup) {
+			$('.popup').fadeOut(popup__speed);
+		}
 		var this__link = $(this).data("popup").replace("#", "");
 		popup__open(this__link);
 	});
 	$('body').on('click', '.js-popup__close', function () {
-		$('.popup').fadeOut(popup__speed);
+		$(this).parents('.popup').fadeOut(popup__speed);
+		//$('.popup').fadeOut(popup__speed);
 		history.pushState(null, null, window.location.href.split('#')[0]);
 		$('body').removeClass('js-no-scroll');
 	});

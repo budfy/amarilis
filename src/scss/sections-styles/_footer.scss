@@ -27,8 +27,11 @@
   line-height: 2rem;
   color: #ffffff;
   z-index: 1;
+  width: intrinsic;
   width: -webkit-fit-content;
   width: fit-content;
+  min-width: 12rem;
+  text-align: center;
   top: 2rem;
 }
 
@@ -135,6 +138,7 @@
     border: none;
     color: #ffffff;
     width: 100%;
+    transition: all .24s;
 
     &::placeholder {
       font-family: Montserrat Alternates;
@@ -144,26 +148,34 @@
       line-height: 1.875rem;
       color: rgba(255, 255, 255, 0.32);
     }
-  }
 
-  &__text {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    color: #FFFFFF;
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    &:focus {
+      background: #5504272a;
+    }
+
+    &__text {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      color: #FFFFFF;
+
+      @media screen and (max-width: 1023px) {
+        max-width: unset;
+        margin-left: 0;
+        order: 1;
+        margin-bottom: 1rem;
+      }
+    }
 
     @media screen and (max-width: 1023px) {
       max-width: unset;
-      margin-left: 0;
-      order: 1;
-      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      order: 2;
     }
-  }
-
-  @media screen and (max-width: 1023px) {
-    max-width: unset;
-    display: flex;
-    flex-direction: column;
-    order: 2;
   }
 }
 
@@ -218,6 +230,14 @@
 
   & input:checked+*>.checkbox__label {
     color: rgba(255, 255, 255, 0.65);
+
+    .politics-link.politics-link--footer {
+      color: var(--color__fill-2);
+
+      &:hover {
+        color: var(--color__fill-1);
+      }
+    }
   }
 }
 
@@ -311,6 +331,10 @@
   display: block;
   font-size: 0.875rem;
   line-height: 1.25rem;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .basement-links__item {

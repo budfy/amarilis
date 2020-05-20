@@ -3,29 +3,29 @@
     <div class="popup__content --base popup-request ">
       <div class="popup__close js-popup__close"></div>
       <h4 class="popup__title">Запит пропозиції</h4>
-      <form action="" class="popup-form mt-32">
+      <form class="popup-form mt-32">
         <input type="hidden" name="project_name" value="Мастера" />
         <input type="hidden" name="admin_email" value="zakaz@amarylis.ru" />
         <input type="hidden" name="form_subject" value="Заявка с сайта Amarilis" />
         <label class="popup-label">
-          <input type="text" class="popup-input px-24 py-40" id="request-name" required>
+          <input type="text" class="popup-input px-24 py-40" name="Имя" id="request-name" required>
           <span class="popup-label__placeholder">Ваше им'я:</span>
         </label>
         <label class="popup-label mt-16">
-          <input type="email" class="popup-input px-24 py-40" id="request-email" required>
+          <input type="email" class="popup-input px-24 py-40" name="Email" id="request-email" required>
           <span class="popup-label__placeholder">E-mail:</span>
         </label>
         <label class="popup-label mt-16">
-          <input type="text" class="popup-input px-24 py-40" id="request-org" required>
+          <input type="text" class="popup-input px-24 py-40" name="Организация" id="request-org" required>
           <span class="popup-label__placeholder">Організація</span>
         </label>
         <label class="popup-label mt-16">
-          <input type="tel" class="popup-input px-24 py-40" id="request-tel" required>
+          <input type="tel" class="popup-input px-24 py-40" name="Телефон" id="request-tel" required>
           <span class="popup-label__placeholder">Телефон:</span>
         </label>
         <button class="popup-btn btn --fill-1 --xl mt-16" type="submit">Надіслати</button>
         <label class="popup-label checkbox basement-checkbox subscribe-label pt-16">
-          <input type="checkbox" checked="checked" required>
+          <input type="checkbox" checked="checked" name="Согласие на обработку персональных данных" required>
           <div class="flex --align-center">
             <div class="checkbox__trigger"></div>
             <div class="checkbox__label --p ml-16">Я даю звою згоду на <strong>обробку персональних даних</strong>

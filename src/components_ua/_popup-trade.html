@@ -2,11 +2,40 @@
   <div class="popup__wrap">
     <div class="popup__content --base popup-master">
       <div class="popup__close js-popup__close"></div>
-      <form action="" class="popup-form">
+      <form class="popup-form">
         <input type="hidden" name="project_name" value="Мастера" />
         <input type="hidden" name="admin_email" value="zakaz@amarylis.ru" />
         <input type="hidden" name="form_subject" value="Заявка с сайта Amarilis" />
         <div class="order-box flex --align-stretch">
+          <div class="order-form col --6">
+            <div class="order-bill mb-32">
+              <span class="order-bill__title">Усього до сплати:</span>
+              <input class="order-bill__summ" name="Общая сумма заказа" readonly>
+            </div>
+            <h4 class="popup__title mb-24">Оформлення замовлення</h4>
+
+            <label class="popup-label">
+              <input type="text" class="popup-input px-24 py-40" name="Имя" id="master-name" required>
+              <span class="popup-label__placeholder">Ваше им'я:</span>
+            </label>
+            <label class="popup-label mt-16">
+              <input type="email" class="popup-input px-24 py-40" name="Email" id="master-email" required>
+              <span class="popup-label__placeholder">E-mail:</span>
+            </label>
+            <label class="popup-label mt-16">
+              <input type="tel" class="popup-input px-24 py-40" name="Телефон" id="master-tel" required>
+              <span class="popup-label__placeholder">Телефон:</span>
+            </label>
+            <button class="popup-btn btn --fill-1 --xl mt-16" type="submit">Надіслати</button>
+            <label class="popup-label checkbox basement-checkbox subscribe-label pt-16">
+              <input type="checkbox" checked="checked" name="Согласие на обработку персональных данных" required>
+              <div class="flex --align-center">
+                <div class="checkbox__trigger"></div>
+                <div class="checkbox__label --p ml-16">Я даю згоду на <a href="#popup-politics" class="politics-link"
+                    data-popup="#popup-politics"><strong>обробку персональних даних</strong></a></div>
+              </div>
+            </label>
+          </div>
           <div class="order-wrapper col --8 py-56">
             <h4 class="order-title mb-24">Товари в замовленні:</h4>
             <div class="order-scroll">
@@ -16,8 +45,8 @@
                   <input type="checkbox" class="order-input">
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
-                    <div class="checkbox__label --p ml-16">Solomeya Універсальний антибактеріальний засіб (спрей) /
-                      Universal Sanitizer (spray) (100 мл) Хіт</div>
+                    <div class="checkbox__label --p ml-16">Solomeya УУніверсальний антибактеріальний засіб (спрей) /
+                      Universal Sanitizer (spray) (100 мл) Хит</div>
                   </div>
                 </label>
 
@@ -26,8 +55,8 @@
 
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
-                      <input type="number" class="counter-calc__text" min="0" step="20" disabled name="Solomeya Універсальний антибактеріальний засіб (спрей) /
-                      Universal Sanitizer (spray) (100 мл) Хит" />
+                      <input type="number" class="counter-calc__text" min="0" step="20" disabled
+                        name="Solomeya_Универсальное_антибактериальное_средство_(спрей)_(100_мл)_Арт:14-1914" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -37,7 +66,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="0" />
                     </div>
                   </div>
@@ -60,8 +89,8 @@
 
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
-                      <input type="number" class="counter-calc__text" min="0" step="20" disabled name="Solomeya Універсальний антибактеріальний засіб (спрей) /
-                      Universal Sanitizer (spray) (150 мл)" />
+                      <input type="number" class="counter-calc__text" min="0" step="20" disabled
+                        name="Solomeya_Универсальное_антибактериальное_средство_(спрей)_(150 мл)_Арт:14-1915" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -71,7 +100,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="1" />
                     </div>
                   </div>
@@ -94,8 +123,8 @@
 
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
-                      <input type="number" class="counter-calc__text" min="0" step="20" disabled name="Solomeya Універсальний антибактеріальний засіб (спрей) /
-                      Universal Sanitizer (spray) (500 мл)" />
+                      <input type="number" class="counter-calc__text" min="0" step="20" disabled
+                        name="Solomeya_Универсальное_антибактериальное_средство_(спрей)_(500 мл)_Арт:14-1921" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -105,7 +134,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="2" />
                     </div>
                   </div>
@@ -118,7 +147,7 @@
                   <input type="checkbox" class="order-input">
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
-                    <div class="checkbox__label --p ml-16">HAAN Очисний та зволожуючий спрей для рук "Ранкова роса" /
+                    <div class="checkbox__label --p ml-16">HAAN Очисний спрей для рук "Ранкова роса" /
                       Hand Sanitizer Dew of Dawn, 30 мл</div>
                   </div>
                 </label>
@@ -128,8 +157,8 @@
 
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
-                      <input type="number" class="counter-calc__text" min="0" step="20" disabled name="HAAN Очисний та зволожуючий спрей для рук Ранкова роса / Hand Sanitizer Dew of Dawn, 30
-                        мл" />
+                      <input type="number" class="counter-calc__text" min="0" step="20" disabled
+                        name="HAAN_ранкова_роса_30_мл_Арт:22-001" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -139,7 +168,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="3" />
                     </div>
                   </div>
@@ -152,7 +181,7 @@
                   <input type="checkbox" class="order-input">
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
-                    <div class="checkbox__label --p ml-16">HAAN Очисний та зволожуючий спрей для рук "Освіжаючий лимон"
+                    <div class="checkbox__label --p ml-16">HAAN Очисний спрей для рук "Освіжаючий лимон"
                       /
                       Hand Sanitizer Citrus Noon, 30 мл</div>
                   </div>
@@ -163,8 +192,8 @@
 
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
-                      <input type="number" class="counter-calc__text" min="0" step="20" disabled name="HAAN Очисний та зволожуючий спрей для рук Освіжаючий лимон / Hand Sanitizer Citrus Noon,
-                        30 мл" />
+                      <input type="number" class="counter-calc__text" min="0" step="20" disabled
+                        name="HAAN_Освежающий_лимон_30_мл_Арт:22-002" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -174,7 +203,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="4" />
                     </div>
                   </div>
@@ -187,7 +216,7 @@
                   <input type="checkbox" class="order-input">
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
-                    <div class="checkbox__label --p ml-16">HAAN Очисний та зволожуючий спрей для рук "Деревинний акцент"
+                    <div class="checkbox__label --p ml-16">HAAN Очисний спрей для рук "Деревинний акцент"
                       /
                       Hand Sanitizer Wood night, 30 мл</div>
                   </div>
@@ -198,8 +227,8 @@
 
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
-                      <input type="number" class="counter-calc__text" min="0" step="20" disabled name="HAAN Очисний та зволожуючий спрей для рук Деревинний акцент / Hand Sanitizer Wood night,
-                        30 мл" />
+                      <input type="number" class="counter-calc__text" min="0" step="20" disabled
+                        name="HAAN_Древесный_акцент_30_мл_Арт:22-003" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -209,7 +238,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="5" />
                     </div>
                   </div>
@@ -222,8 +251,8 @@
                   <input type="checkbox" class="order-input">
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
-                    <div class="checkbox__label --p ml-16">HAAN Очисний та зволожуючий спрей для рук "Ранкова свіжість"
-                      / Hand Sanitizer Morning Glory, 30 мл</div>
+                    <div class="checkbox__label --p ml-16">HAAN Очисний спрей для рук "Ранкова
+                      свіжість" / Hand Sanitizer Morning Glory, 30 мл</div>
                   </div>
                 </label>
 
@@ -232,8 +261,8 @@
 
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
-                      <input type="number" class="counter-calc__text" min="0" step="20" disabled name="HAAN Очисний та зволожуючий спрей для рук Ранкова свіжість / Hand Sanitizer Morning
-                        Glory, 30 мл" />
+                      <input type="number" class="counter-calc__text" min="0" step="20" disabled
+                        name="HAAN_ранкова_свежесть_30_мл_Арт:22-004" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -243,7 +272,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="6" />
                     </div>
                   </div>
@@ -256,8 +285,8 @@
                   <input type="checkbox" class="order-input">
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
-                    <div class="checkbox__label --p ml-16">HAAN Очисний та зволожуючий спрей для рук "Таємничий закат"
-                      / Hand Sanitizer Sunset Fleur, 30 мл</div>
+                    <div class="checkbox__label --p ml-16">HAAN Очисний спрей для рук "Таємничий закат" / Hand Sanitizer
+                      Sunset Fleur, 30 мл</div>
                   </div>
                 </label>
 
@@ -266,8 +295,8 @@
 
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
-                      <input type="number" class="counter-calc__text" min="0" step="20" disabled name="HAAN Очисний та зволожуючий спрей для рук Таємничий закат / Hand Sanitizer Sunset
-                        Fleur, 30 мл" />
+                      <input type="number" class="counter-calc__text" min="0" step="20" disabled
+                        name="HAAN_Таинственный_закат_30_мл_Арт:22-005" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -277,7 +306,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="7" />
                     </div>
                   </div>
@@ -290,7 +319,7 @@
                   <input type="checkbox" class="order-input">
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
-                    <div class="checkbox__label --p ml-16">Solomeya Универсальний антибактеріальний засіб для рук у
+                    <div class="checkbox__label --p ml-16">Solomeya Універсальний антибактеріальний засіб для рук у
                       вигляді спрею «Лимон» /Universal Sanitizer Spray for hands «Lemon» 20 мл</div>
                   </div>
                 </label>
@@ -301,7 +330,7 @@
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
                       <input type="number" class="counter-calc__text" min="0" step="20" disabled
-                        name="Solomeya Универсальний антибактеріальний засіб для рук у вигляді спрею «Лимон» /Universal Sanitizer Spray for hands «Lemon» 20 мл" />
+                        name="Solomeya_спрей_«Лимон»_20_мл_Арт:14-1934" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -311,7 +340,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="8" />
                     </div>
                   </div>
@@ -324,8 +353,8 @@
                   <input type="checkbox" class="order-input">
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
-                    <div class="checkbox__label --p ml-16">Solomeya Универсальний антибактеріальний засіб для рук у
-                      вигляді спрею «Цитрус» /Universal Sanitizer Spray for hands «Citrus» 20 мл</div>
+                    <div class="checkbox__label --p ml-16">Solomeya Універсальний антибактеріальний засіб для рук у
+                      вигляді спрею «Чайне дерево» /Universal Sanitizer Spray for hands «Tea Tree» 20 мл</div>
                   </div>
                 </label>
 
@@ -335,7 +364,7 @@
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
                       <input type="number" class="counter-calc__text" min="0" step="20" disabled
-                        name="Solomeya Универсальний антибактеріальний засіб для рук у вигляді спрею «Цитрус» /Universal Sanitizer Spray for hands «Citrus» 20 мл" />
+                        name="Solomeya_«Чайное_дерево»_20_мл_Арт:14-1935" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -345,7 +374,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="9" />
                     </div>
                   </div>
@@ -358,8 +387,8 @@
                   <input type="checkbox" class="order-input">
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
-                    <div class="checkbox__label --p ml-16">Solomeya Универсальний антибактеріальний засіб для рук у
-                      вигляді спрею «Алое» /Universal Sanitizer Spray for hands «Aloe» 20 мл</div>
+                    <div class="checkbox__label --p ml-16">Solomeya Універсальний антибактеріальний засіб для рук в
+                      спрее «Алоt» /Universal Sanitizer Spray for hands «Aloe» 20 мл</div>
                   </div>
                 </label>
 
@@ -369,7 +398,7 @@
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
                       <input type="number" class="counter-calc__text" min="0" step="20" disabled
-                        name="Solomeya Универсальний антибактеріальний засіб для рук у вигляді спрею «Алое» /Universal Sanitizer Spray for hands «Aloe» 20 мл" />
+                        name="Solomey_«Алоэ»_20_мл_Арт:14-1936" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -379,7 +408,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="10" />
                     </div>
                   </div>
@@ -393,8 +422,7 @@
                   <div class="flex --align-center">
                     <div class="checkbox__trigger"></div>
                     <div class="checkbox__label --p ml-16">Solomeya Косметичні рукавички 100% бавовна (1 пара в
-                      кор.)/100%
-                      Cotton Gloves for cosmetic use</div>
+                      кор.)/100% Cotton Gloves for cosmetic use</div>
                   </div>
                 </label>
 
@@ -403,8 +431,8 @@
 
                     <div class="counter-calc flex --align-center">
                       <button type="button" class="counter-calc__minus">-</button>
-                      <input type="number" class="counter-calc__text" min="0" step="20" disabled name="Solomeya Косметичні рукавички 100% бавовна (1 пара в кор.)/100%
-                        Cotton Gloves for cosmetic use" />
+                      <input type="number" class="counter-calc__text" min="0" step="20" disabled
+                        name="Solomeya_Косметические_перчатки_(1_пара_в_кор.)_Арт:15-015" />
                       <button type="button" class="counter-calc__plus">+</button>
                     </div>
 
@@ -414,7 +442,7 @@
                     </div>
 
                     <div class="order-summ">
-                      <span class="order-summ__text">Усього:</span>
+                      <span class="order-summ__text">Всього:</span>
                       <input type="text" class="order-summ__value" readonly data-id="11" />
                     </div>
                   </div>
@@ -422,38 +450,6 @@
 
               </div>
             </div>
-
-          </div>
-
-          <div class="order-form col --6">
-            <div class="order-bill mb-32">
-              <span class="order-bill__title">Усього до сплати:</span>
-              <input class="order-bill__summ" name="Загальна сума замовлення" readonly>
-            </div>
-            <h4 class="popup__title mb-24">Оформлення замовлення</h4>
-
-            <label class="popup-label">
-              <input type="text" class="popup-input px-24 py-40" id="master-name" required>
-              <span class="popup-label__placeholder">Ваше им'я:</span>
-            </label>
-            <label class="popup-label mt-16">
-              <input type="email" class="popup-input px-24 py-40" id="master-email" required>
-              <span class="popup-label__placeholder">E-mail:</span>
-            </label>
-            <label class="popup-label mt-16">
-              <input type="tel" class="popup-input px-24 py-40" id="master-tel" required>
-              <span class="popup-label__placeholder">Телефон:</span>
-            </label>
-            <button class="popup-btn btn --fill-1 --xl mt-16" type="submit">Надіслати</button>
-            <label class="popup-label checkbox basement-checkbox subscribe-label pt-16">
-              <input type="checkbox" checked="checked" required>
-              <div class="flex --align-center">
-                <div class="checkbox__trigger"></div>
-                <div class="checkbox__label --p ml-16">Я даю згоду на <strong>обробку персональних даних</strong>
-                </div>
-              </div>
-            </label>
-
           </div>
         </div>
       </form>

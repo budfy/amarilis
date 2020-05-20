@@ -4,6 +4,7 @@
   border-radius: 1rem;
   position: relative;
   cursor: pointer;
+  margin-top: 1rem;
 
   &::after {
     content: "";
@@ -41,6 +42,7 @@
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.5;
+    max-width: 95%;
   }
 }
 

@@ -301,9 +301,10 @@
   flex-wrap: nowrap;
   border-radius: 2rem;
   overflow: hidden;
+  flex-direction: row-reverse;
 
   @media screen and (max-width: 700px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -455,20 +456,51 @@
   }
 }
 
-.popup-politics .popup__content {
-  max-width: 80%;
+.popup-politics,
+.popup-confidential,
+.popup-delivery {
 
-  .popup-title {
-    text-transform: uppercase;
+  & .popup__content {
+    max-width: 60%;
+
+    .popup__title {
+      text-transform: uppercase;
+      color: var(--color__fill-1);
+      font-size: 2.5rem;
+    }
   }
 }
 
 .popup-text {
-  max-height: 70vh;
+  max-height: 60vh;
 
   & p,
   li {
     margin-bottom: .5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  h6 {
+    font-size: 1rem;
   }
 }
 
