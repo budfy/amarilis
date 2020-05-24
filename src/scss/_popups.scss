@@ -303,19 +303,19 @@
   overflow: hidden;
   flex-direction: row-reverse;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1023px) {
     flex-direction: column-reverse;
   }
 }
 
 .order-box .order-wrapper,
 .order-box .order-form {
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1023px) {
     max-width: unset;
     width: 100%;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1023px) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -324,6 +324,10 @@
 .order-wrapper {
   background-color: #F4F4F4;
   padding: 3rem 3.5rem 4.875rem;
+
+  &.col {
+    max-width: unset;
+  }
 }
 
 .order-scroll {
